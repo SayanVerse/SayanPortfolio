@@ -44,15 +44,12 @@ export default function Index() {
 
   const skills = [
     { name: "🐍 Python", level: 90, description: "Writing clean, efficient scripts for automation, data analysis, and project development." },
-    { name: "☕ Java", level: 85, description: "Building robust object-oriented applications with solid logic and structure." },
-    { name: "⚙️ C++", level: 80, description: "Developing high-performance programs and solving complex computational problems." },
-    { name: "🌐 C", level: 75, description: "Mastering low-level programming for system-level tasks and logic building." },
-    { name: "🎨 HTML", level: 85, description: "Creating structured, semantic web pages with clear content organization." },
-    { name: "🎯 CSS", level: 80, description: "Designing visually appealing, responsive, and user-friendly interfaces." },
-    { name: "🤖 Machine Learning", level: 75, description: "Building and training models to solve real-world problems using data-driven approaches." },
-    { name: "🧠 Problem-Solving", level: 95, description: "Tackling challenges with logical thinking, creativity, and analytical skills." },
-    { name: "📊 Data Analysis", level: 80, description: "Extracting insights from data to support smart decision-making." },
-    { name: "🚀 Project Development", level: 85, description: "Turning ideas into functional, polished, and impactful solutions." }
+    { name: "☕ Java (Basics)", level: 70, description: "Building basic object-oriented applications with fundamental logic and structure." },
+    { name: "🤖 Machine Learning with Python", level: 80, description: "Building and training models to solve real-world problems using data-driven approaches." },
+    { name: "🌐 C (Basics)", level: 80, description: "Understanding low-level programming for system-level tasks and logic building." },
+    { name: "🎨 HTML", level: 70, description: "Creating structured, semantic web pages with clear content organization." },
+    { name: "🎯 CSS", level: 85, description: "Designing visually appealing, responsive, and user-friendly interfaces." },
+    { name: "🧠 Problem-Solving", level: 95, description: "Tackling challenges with logical thinking, creativity, and analytical skills." }
   ];
 
   const projects = [
