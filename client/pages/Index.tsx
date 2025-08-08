@@ -379,7 +379,12 @@ export default function Index() {
               <Phone className="w-5 h-5 mr-2" />
               Call Me
             </Button>
-            <Button variant="outline" size="lg" className="text-lg px-8 py-6">
+            <Button
+              variant="outline"
+              size="lg"
+              className="text-lg px-8 py-6"
+              onClick={openCalendarScheduling}
+            >
               <Calendar className="w-5 h-5 mr-2" />
               Schedule Call
             </Button>
