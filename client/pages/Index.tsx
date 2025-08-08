@@ -80,23 +80,16 @@ export default function Index() {
 
   const projects = [
     {
-      title: "E-Commerce Platform",
-      description: "A full-stack e-commerce solution built with React, Node.js, and MongoDB. Features include real-time inventory, payment processing, and admin dashboard.",
-      tags: ["React", "Node.js", "MongoDB", "Stripe"],
-      link: "#",
+      title: "Loan Prediction Model",
+      description: "A comprehensive machine learning project that predicts loan approval status using advanced algorithms. Implemented multiple ML models including Random Forest, Decision Tree, and K-Nearest Neighbors (KNN) to achieve optimal prediction accuracy. The project includes thorough data preprocessing, feature engineering, and model evaluation with cross-validation techniques.",
+      tags: ["Python", "Pandas", "Scikit-learn", "Random Forest", "Decision Tree", "KNN", "Machine Learning"],
+      link: "https://github.com/SayanVerse",
       image: "/placeholder.svg"
     },
     {
-      title: "Task Management App",
-      description: "A collaborative project management tool with real-time updates, team chat, and advanced analytics built using modern web technologies.",
-      tags: ["Next.js", "PostgreSQL", "Socket.io", "TypeScript"],
-      link: "#",
-      image: "/placeholder.svg"
-    },
-    {
-      title: "AI Content Generator",
-      description: "An intelligent content generation platform that uses machine learning to create engaging copy for marketing and social media.",
-      tags: ["Python", "OpenAI API", "React", "Flask"],
+      title: "Personal Portfolio Website",
+      description: "A modern, responsive portfolio website built with React and TypeScript, featuring a clean design system, smooth animations, and interactive elements. Showcases my skills, projects, and contact information with a professional aesthetic. Includes dark/light theme toggle, mobile-responsive design, and optimized performance.",
+      tags: ["React", "TypeScript", "Tailwind CSS", "Vite", "Responsive Design", "UI/UX"],
       link: "#",
       image: "/placeholder.svg"
     }
@@ -167,7 +160,7 @@ export default function Index() {
             <span className="gradient-text">Sayan Maiti</span>
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            &nbsp;— 🚀 an aspiring CSE engineer passionate about 💻 coding, 🧠 problem-solving, and 🎯 building creative tech solutions.
+            &nbsp;— 🚀 an aspiring CSE engineer passionate about 💻 coding, 🧠 problem-solving, and ��� building creative tech solutions.
             <div>
               <br />
             </div>
