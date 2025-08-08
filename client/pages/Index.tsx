@@ -43,6 +43,31 @@ export default function Index() {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
   };
 
+  const openCalendarScheduling = () => {
+    const startDate = new Date();
+    startDate.setDate(startDate.getDate() + 1); // Tomorrow
+    startDate.setHours(10, 0, 0, 0); // 10 AM
+
+    const endDate = new Date(startDate);
+    endDate.setHours(11, 0, 0, 0); // 11 AM (1 hour meeting)
+
+    const formatDate = (date: Date) => {
+      return date.toISOString().replace(/[-:]/g, '').split('.')[0] + 'Z';
+    };
+
+    const eventDetails = {
+      text: 'Meeting with Sayan Maiti',
+      dates: `${formatDate(startDate)}/${formatDate(endDate)}`,
+      details: 'Let\'s discuss your project and how I can help bring your ideas to life.',
+      location: 'Online (Google Meet/Zoom)',
+      ctz: 'Asia/Kolkata'
+    };
+
+    const googleCalendarUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(eventDetails.text)}&dates=${eventDetails.dates}&details=${encodeURIComponent(eventDetails.details)}&location=${encodeURIComponent(eventDetails.location)}&ctz=${eventDetails.ctz}`;
+
+    window.open(googleCalendarUrl, '_blank');
+  };
+
   const skills = [
     { name: "🐍 Python", level: 90, description: "Writing clean, efficient scripts for automation, data analysis, and project development." },
     { name: "☕ Java (Basics)", level: 70, description: "Building basic object-oriented applications with fundamental logic and structure." },
