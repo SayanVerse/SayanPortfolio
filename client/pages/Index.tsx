@@ -188,7 +188,31 @@ export default function Index() {
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">About Me</h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              Passionate about creating seamless user experiences and robust applications
+              <div>
+                <span>
+                  <span>
+                    <span>
+                      👋 Hi, I'm Sayan Maiti — a passionate and curious B.Tech CSE student at MAKAUT 🎓 with a strong interest in 🧠 problem-solving, 🤖 machine learning, and 💡 technology. I enjoy working with 🐍 Python, ☕ Java, ⚙️ C++, 🌐 C, 🎨 HTML, 🎯 CSS, and building projects that combine creativity 🎭 and logic 🧩. My goal is to become a skilled 💻 software developer who can create ⚡ efficient, 📈 impactful, and 🤝 user-friendly solutions.
+                    </span>
+                  </span>
+                </span>
+              </div>
+              <div>
+                <span>
+                  <span>
+                    <span>
+                      <br />
+                    </span>
+                  </span>
+                </span>
+              </div>
+              <div>
+                <span>
+                  When I'm not coding ⌨️, I love exploring 🌍 new tech trends, sharpening my skills through 🏆 challenges, and learning something new 📚 every day — because in tech, there's always something exciting ✨ waiting to be discovered.
+                  <br />
+                </span>
+                <br />
+              </div>
             </p>
           </div>
           
@@ -200,9 +224,9 @@ export default function Index() {
                     <Code2 className="w-6 h-6 text-primary" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold mb-2">Full-Stack Development</h3>
+                    <h3 className="text-xl font-semibold mb-2">Machine learning</h3>
                     <p className="text-muted-foreground">
-                      Building scalable web applications with modern technologies and best practices.
+                      Building and training models to solve real-world problems using data-driven approaches.
                     </p>
                   </div>
                 </div>
