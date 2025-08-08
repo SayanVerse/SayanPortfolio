@@ -167,13 +167,13 @@ export default function Index() {
             </Button>
           </div>
           <div className="flex justify-center space-x-6">
-            <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+            <a href="https://github.com/SayanVerse" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
               <Github className="w-6 h-6" />
             </a>
-            <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+            <a href="https://www.linkedin.com/in/sayan-maiti-9425b431b" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
               <Linkedin className="w-6 h-6" />
             </a>
-            <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+            <a href="mailto:sayan.official.2024@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">
               <Mail className="w-6 h-6" />
             </a>
           </div>
@@ -360,11 +360,11 @@ export default function Index() {
           
           <div className="flex justify-center space-x-6">
             <a 
-              href="mailto:hello@sayanmaiti.dev" 
+              href="mailto:sayan.official.2024@gmail.com" 
               className="flex items-center space-x-2 text-muted-foreground hover:text-primary transition-colors"
             >
               <Mail className="w-5 h-5" />
-              <span>hello@sayanmaiti.dev</span>
+              <span>sayan.official.2024@gmail.com</span>
             </a>
           </div>
         </div>
@@ -378,13 +378,13 @@ export default function Index() {
               © 2024 Sayan Maiti. All rights reserved.
             </div>
             <div className="flex space-x-6">
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+              <a href="https://github.com/SayanVerse" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                 <Github className="w-5 h-5" />
               </a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+              <a href="https://www.linkedin.com/in/sayan-maiti-9425b431b" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                 <Linkedin className="w-5 h-5" />
               </a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+              <a href="mailto:sayan.official.2024@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">
                 <Mail className="w-5 h-5" />
               </a>
             </div>
