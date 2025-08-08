@@ -159,7 +159,23 @@ export default function Index() {
         <div className="max-w-6xl mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <div className="text-xl font-bold gradient-text">Portfolio</div>
-            <div className="hidden md:flex items-center space-x-8">
+            <div className="flex items-center space-x-8">
+              {/* Mobile dark mode toggle */}
+              <Button
+                variant="ghost"
+                size="icon"
+                onClick={() => setDarkMode(!darkMode)}
+                className="md:hidden"
+              >
+                {darkMode ? (
+                  <Sun className="h-5 w-5" />
+                ) : (
+                  <Moon className="h-5 w-5" />
+                )}
+              </Button>
+
+              {/* Desktop navigation */}
+              <div className="hidden md:flex items-center space-x-8">
               <button
                 onClick={() => scrollToSection("home")}
                 className="text-foreground hover:text-primary transition-colors"
@@ -184,18 +200,19 @@ export default function Index() {
               >
                 Contact
               </button>
-              <Button
-                variant="ghost"
-                size="icon"
-                onClick={() => setDarkMode(!darkMode)}
-                className="ml-4"
-              >
-                {darkMode ? (
-                  <Sun className="h-5 w-5" />
-                ) : (
-                  <Moon className="h-5 w-5" />
-                )}
-              </Button>
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  onClick={() => setDarkMode(!darkMode)}
+                  className="ml-4"
+                >
+                  {darkMode ? (
+                    <Sun className="h-5 w-5" />
+                  ) : (
+                    <Moon className="h-5 w-5" />
+                  )}
+                </Button>
+              </div>
             </div>
           </div>
         </div>
@@ -204,9 +221,25 @@ export default function Index() {
       {/* Hero Section */}
       <section
         id="home"
-        className="min-h-screen flex items-center justify-center relative overflow-hidden"
+        className="min-h-screen flex items-center justify-center relative overflow-hidden animated-bg"
       >
         <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-violet-100/20 dark:to-violet-900/20"></div>
+
+        {/* Animated background elements */}
+        <div className="floating-elements"></div>
+
+        {/* Floating particles */}
+        <div className="particles">
+          <div className="particle"></div>
+          <div className="particle"></div>
+          <div className="particle"></div>
+          <div className="particle"></div>
+          <div className="particle"></div>
+          <div className="particle"></div>
+          <div className="particle"></div>
+          <div className="particle"></div>
+          <div className="particle"></div>
+        </div>
         <div className="relative z-10 text-center max-w-4xl mx-auto px-6 flex flex-col">
           <div className="mb-8">
             <div className="w-32 h-32 mx-auto mb-8 rounded-full bg-gradient-to-r from-primary to-violet-600 p-1">
