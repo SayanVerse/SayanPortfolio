@@ -220,7 +220,7 @@ export default function Index() {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start justify-start">
             <div>
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
@@ -263,7 +263,7 @@ export default function Index() {
               <div className="mt-8 flex items-center space-x-6 text-sm text-muted-foreground">
                 <div className="flex items-center space-x-2">
                   <MapPin className="w-4 h-4" />
-                  <span>San Francisco, CA</span>
+                  <span>Kolkata, India </span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <Calendar className="w-4 h-4" />
