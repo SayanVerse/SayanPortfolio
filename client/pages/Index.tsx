@@ -127,7 +127,7 @@ export default function Index() {
       {/* Hero Section */}
       <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-violet-100/20 dark:to-violet-900/20"></div>
-        <div className="relative z-10 text-center max-w-4xl mx-auto px-6">
+        <div className="relative z-10 text-center max-w-4xl mx-auto px-6 flex flex-col">
           <div className="mb-8">
             <div className="w-32 h-32 mx-auto mb-8 rounded-full bg-gradient-to-r from-primary to-violet-600 p-1">
               <div className="w-full h-full rounded-full bg-background flex items-center justify-center">
@@ -140,7 +140,10 @@ export default function Index() {
             <span className="gradient-text">Sayan Maiti</span>
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Full-Stack Developer & UI/UX Designer crafting beautiful digital experiences
+            &nbsp;— 🚀 an aspiring CSE engineer passionate about 💻 coding, 🧠 problem-solving, and 🎯 building creative tech solutions.
+            <div>
+              <br />
+            </div>
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <Button 
