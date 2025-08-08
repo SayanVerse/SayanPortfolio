@@ -220,7 +220,7 @@ export default function Index() {
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto">
             &nbsp;— 🚀 an aspiring CSE engineer passionate about 💻 coding, 🧠
-            problem-solving, and ��� building creative tech solutions.
+            problem-solving, and ⚡  building creative tech solutions.
             <div>
               <br />
             </div>
