@@ -275,13 +275,14 @@ export default function Index() {
             <div className="space-y-6">
               <h3 className="text-2xl font-semibold mb-6">Skills & Expertise</h3>
               {skills.map((skill, index) => (
-                <div key={index} className="space-y-2">
+                <div key={index} className="space-y-3">
                   <div className="flex justify-between">
                     <span className="font-medium">{skill.name}</span>
                     <span className="text-muted-foreground">{skill.level}%</span>
                   </div>
+                  <p className="text-sm text-muted-foreground">{skill.description}</p>
                   <div className="w-full bg-muted rounded-full h-2">
-                    <div 
+                    <div
                       className="bg-gradient-to-r from-primary to-violet-600 h-2 rounded-full transition-all duration-1000 ease-out"
                       style={{ width: `${skill.level}%` }}
                     ></div>
