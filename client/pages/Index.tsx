@@ -176,30 +176,30 @@ export default function Index() {
 
               {/* Desktop navigation */}
               <div className="hidden md:flex items-center space-x-8">
-              <button
-                onClick={() => scrollToSection("home")}
-                className="text-foreground hover:text-primary transition-colors"
-              >
-                Home
-              </button>
-              <button
-                onClick={() => scrollToSection("about")}
-                className="text-foreground hover:text-primary transition-colors"
-              >
-                About
-              </button>
-              <button
-                onClick={() => scrollToSection("projects")}
-                className="text-foreground hover:text-primary transition-colors"
-              >
-                Projects
-              </button>
-              <button
-                onClick={() => scrollToSection("contact")}
-                className="text-foreground hover:text-primary transition-colors"
-              >
-                Contact
-              </button>
+                <button
+                  onClick={() => scrollToSection("home")}
+                  className="text-foreground hover:text-primary transition-colors"
+                >
+                  Home
+                </button>
+                <button
+                  onClick={() => scrollToSection("about")}
+                  className="text-foreground hover:text-primary transition-colors"
+                >
+                  About
+                </button>
+                <button
+                  onClick={() => scrollToSection("projects")}
+                  className="text-foreground hover:text-primary transition-colors"
+                >
+                  Projects
+                </button>
+                <button
+                  onClick={() => scrollToSection("contact")}
+                  className="text-foreground hover:text-primary transition-colors"
+                >
+                  Contact
+                </button>
                 <Button
                   variant="ghost"
                   size="icon"
