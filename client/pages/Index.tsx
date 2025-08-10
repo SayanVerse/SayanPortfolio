@@ -26,6 +26,7 @@ import {
 export default function Index() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   // Initialize interactive features
   useInteractiveBackground();
@@ -59,6 +60,7 @@ export default function Index() {
 
   const scrollToSection = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+    setIsMobileMenuOpen(false); // Close mobile menu after navigation
   };
 
   const openCalendarScheduling = () => {
@@ -190,7 +192,7 @@ export default function Index() {
               </div>
               <div className="flex items-center space-x-4">
                 {/* Desktop navigation */}
-                <div className="flex items-center space-x-8">
+                <div className="hidden md:flex items-center space-x-8">
                   <button
                     onClick={() => scrollToSection("home")}
                     className="text-foreground hover:text-primary transition-colors"
@@ -216,6 +218,23 @@ export default function Index() {
                     Contact
                   </button>
                 </div>
+
+                {/* Mobile hamburger menu */}
+                <button
+                  onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                  className="md:hidden flex flex-col space-y-1 p-2 rounded-lg hover:bg-primary/10 transition-colors"
+                  aria-label="Toggle mobile menu"
+                >
+                  <div className={`w-6 h-0.5 bg-foreground transition-all duration-300 ${
+                    isMobileMenuOpen ? 'rotate-45 translate-y-2' : ''
+                  }`}></div>
+                  <div className={`w-6 h-0.5 bg-foreground transition-all duration-300 ${
+                    isMobileMenuOpen ? 'opacity-0' : ''
+                  }`}></div>
+                  <div className={`w-6 h-0.5 bg-foreground transition-all duration-300 ${
+                    isMobileMenuOpen ? '-rotate-45 -translate-y-2' : ''
+                  }`}></div>
+                </button>
               </div>
             </div>
           </div>
