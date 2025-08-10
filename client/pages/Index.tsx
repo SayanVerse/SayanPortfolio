@@ -4,6 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { LiveClock } from "@/components/ui/live-clock";
 import { AdvancedBackground } from "@/components/ui/advanced-background";
+import { LoadingAnimation } from "@/components/ui/loading-animation";
 import { useInteractiveBackground } from "@/hooks/useInteractiveBackground";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { useMobileOptimization } from "@/hooks/useMobileOptimization";
@@ -19,14 +20,12 @@ import {
   Zap,
   Globe,
   ChevronDown,
-  Moon,
-  Sun,
   Phone,
 } from "lucide-react";
 
 export default function Index() {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [darkMode, setDarkMode] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   // Initialize interactive features
   useInteractiveBackground();
@@ -42,20 +41,10 @@ export default function Index() {
   }, []);
 
   useEffect(() => {
-    // Force apply dark mode changes
-    const applyDarkMode = () => {
-      const htmlElement = document.documentElement;
-      if (darkMode) {
-        htmlElement.classList.add("dark");
-        htmlElement.setAttribute("data-theme", "dark");
-      } else {
-        htmlElement.classList.remove("dark");
-        htmlElement.setAttribute("data-theme", "light");
-      }
-    };
-
-    // Apply immediately
-    applyDarkMode();
+    // Force dark mode always
+    const htmlElement = document.documentElement;
+    htmlElement.classList.add("dark");
+    htmlElement.setAttribute("data-theme", "dark");
 
     // Force a repaint on mobile devices
     if (typeof window !== "undefined") {
@@ -66,7 +55,7 @@ export default function Index() {
         }, 10);
       });
     }
-  }, [darkMode]);
+  }, []);
 
   const scrollToSection = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
@@ -192,31 +181,8 @@ export default function Index() {
               <LiveClock className="scale-75 origin-left" />
             </div>
             <div className="flex items-center space-x-4">
-              {/* Mobile dark mode toggle - Always visible */}
-              <Button
-                variant="ghost"
-                size="icon"
-                onClick={(e) => {
-                  e.preventDefault();
-                  e.stopPropagation();
-                  setDarkMode(!darkMode);
-                }}
-                className="md:hidden flex-shrink-0 touch-manipulation"
-                aria-label="Toggle dark mode"
-                style={{
-                  WebkitTapHighlightColor: "transparent",
-                  touchAction: "manipulation",
-                }}
-              >
-                {darkMode ? (
-                  <Sun className="h-5 w-5" />
-                ) : (
-                  <Moon className="h-5 w-5" />
-                )}
-              </Button>
-
               {/* Desktop navigation */}
-              <div className="hidden md:flex items-center space-x-8">
+              <div className="flex items-center space-x-8">
                 <button
                   onClick={() => scrollToSection("home")}
                   className="text-foreground hover:text-primary transition-colors"
@@ -241,18 +207,6 @@ export default function Index() {
                 >
                   Contact
                 </button>
-                <Button
-                  variant="ghost"
-                  size="icon"
-                  onClick={() => setDarkMode(!darkMode)}
-                  className="ml-4"
-                >
-                  {darkMode ? (
-                    <Sun className="h-5 w-5" />
-                  ) : (
-                    <Moon className="h-5 w-5" />
-                  )}
-                </Button>
               </div>
             </div>
           </div>
