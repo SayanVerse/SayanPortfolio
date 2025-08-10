@@ -6,6 +6,7 @@ import { LiveClock } from "@/components/ui/live-clock";
 import { AdvancedBackground } from "@/components/ui/advanced-background";
 import { useInteractiveBackground } from "@/hooks/useInteractiveBackground";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { useMobileOptimization } from "@/hooks/useMobileOptimization";
 import {
   Github,
   Linkedin,
@@ -30,6 +31,7 @@ export default function Index() {
   // Initialize interactive features
   useInteractiveBackground();
   useScrollAnimation();
+  useMobileOptimization();
 
   useEffect(() => {
     const handleScroll = () => {
