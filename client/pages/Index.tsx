@@ -326,7 +326,10 @@ export default function Index() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-20 bg-muted/50 fade-in-up relative overflow-hidden">
+      <section
+        id="about"
+        className="py-20 bg-muted/50 fade-in-up relative overflow-hidden"
+      >
         <AdvancedBackground />
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-16 fade-in-up stagger-1">
@@ -458,7 +461,10 @@ export default function Index() {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="py-20 fade-in-up relative overflow-hidden animated-bg">
+      <section
+        id="projects"
+        className="py-20 fade-in-up relative overflow-hidden animated-bg"
+      >
         <AdvancedBackground />
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-16 fade-in-up stagger-1">
@@ -516,7 +522,10 @@ export default function Index() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 bg-muted/50 fade-in-up relative overflow-hidden animated-bg">
+      <section
+        id="contact"
+        className="py-20 bg-muted/50 fade-in-up relative overflow-hidden animated-bg"
+      >
         <AdvancedBackground />
         <div className="max-w-4xl mx-auto px-6 text-center fade-in-up stagger-1">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 glow-text">
