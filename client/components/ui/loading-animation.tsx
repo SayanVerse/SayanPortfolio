@@ -13,16 +13,16 @@ export function LoadingAnimation({ onComplete }: LoadingAnimationProps) {
   const loadingSteps = [
     "Initializing",
     "Loading Matrix",
-    "Connecting Networks", 
+    "Connecting Networks",
     "Rendering Universe",
-    "Finalizing"
+    "Finalizing",
   ];
 
   useEffect(() => {
     const progressInterval = setInterval(() => {
       setProgress((prev) => {
         const newProgress = prev + Math.random() * 15 + 5;
-        
+
         // Update loading text based on progress
         if (newProgress >= 80) {
           setLoadingText(loadingSteps[4]);
@@ -45,7 +45,7 @@ export function LoadingAnimation({ onComplete }: LoadingAnimationProps) {
           }, 500); // Brief pause at 100%
           return 100;
         }
-        
+
         return newProgress;
       });
     }, 100);
@@ -65,7 +65,7 @@ export function LoadingAnimation({ onComplete }: LoadingAnimationProps) {
       <div className="absolute inset-0">
         {/* Grid pattern */}
         <div className="absolute inset-0 opacity-20">
-          <div 
+          <div
             className="w-full h-full"
             style={{
               backgroundImage: `
@@ -73,7 +73,7 @@ export function LoadingAnimation({ onComplete }: LoadingAnimationProps) {
                 linear-gradient(90deg, rgba(59, 130, 246, 0.1) 1px, transparent 1px)
               `,
               backgroundSize: "50px 50px",
-              animation: "gridMove 20s linear infinite"
+              animation: "gridMove 20s linear infinite",
             }}
           />
         </div>
@@ -87,7 +87,7 @@ export function LoadingAnimation({ onComplete }: LoadingAnimationProps) {
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
               animation: `float ${3 + Math.random() * 4}s ease-in-out infinite`,
-              animationDelay: `${Math.random() * 2}s`
+              animationDelay: `${Math.random() * 2}s`,
             }}
           />
         ))}
@@ -100,10 +100,14 @@ export function LoadingAnimation({ onComplete }: LoadingAnimationProps) {
             style={{
               left: `${10 + i * 12}%`,
               animation: `matrixFall ${8 + Math.random() * 4}s linear infinite`,
-              animationDelay: `${Math.random() * 5}s`
+              animationDelay: `${Math.random() * 5}s`,
             }}
           >
-            {["01", "アイ", "カキ", "サシ", "タチ"][Math.floor(Math.random() * 5)]}
+            {
+              ["01", "アイ", "カキ", "サシ", "タチ"][
+                Math.floor(Math.random() * 5)
+              ]
+            }
           </div>
         ))}
       </div>
@@ -113,7 +117,10 @@ export function LoadingAnimation({ onComplete }: LoadingAnimationProps) {
         {/* Logo/Icon */}
         <div className="w-24 h-24 mx-auto mb-8 rounded-full bg-gradient-to-r from-primary to-blue-500 p-1 animate-pulse">
           <div className="w-full h-full rounded-full bg-background flex items-center justify-center">
-            <Code2 className="w-12 h-12 text-primary animate-spin" style={{ animationDuration: "3s" }} />
+            <Code2
+              className="w-12 h-12 text-primary animate-spin"
+              style={{ animationDuration: "3s" }}
+            />
           </div>
         </div>
 
@@ -122,7 +129,7 @@ export function LoadingAnimation({ onComplete }: LoadingAnimationProps) {
           <h2 className="text-2xl font-bold text-foreground">
             <span className="gradient-text">{loadingText}</span>
           </h2>
-          
+
           {/* Progress bar */}
           <div className="w-80 max-w-sm mx-auto">
             <div className="flex justify-between text-sm text-muted-foreground mb-2">
@@ -130,15 +137,15 @@ export function LoadingAnimation({ onComplete }: LoadingAnimationProps) {
               <span>{Math.round(progress)}%</span>
             </div>
             <div className="w-full bg-muted rounded-full h-2 overflow-hidden">
-              <div 
+              <div
                 className="h-full bg-gradient-to-r from-primary to-blue-500 rounded-full transition-all duration-300 ease-out relative"
                 style={{ width: `${progress}%` }}
               >
                 {/* Animated shimmer effect */}
-                <div 
+                <div
                   className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent"
                   style={{
-                    animation: "shimmer 2s ease-in-out infinite"
+                    animation: "shimmer 2s ease-in-out infinite",
                   }}
                 />
               </div>
@@ -159,7 +166,7 @@ export function LoadingAnimation({ onComplete }: LoadingAnimationProps) {
               className="w-2 h-2 bg-primary rounded-full animate-bounce"
               style={{
                 animationDelay: `${i * 0.2}s`,
-                animationDuration: "1.4s"
+                animationDuration: "1.4s",
               }}
             />
           ))}
@@ -168,7 +175,8 @@ export function LoadingAnimation({ onComplete }: LoadingAnimationProps) {
 
       <style jsx>{`
         @keyframes float {
-          0%, 100% {
+          0%,
+          100% {
             transform: translateY(0px);
           }
           50% {
