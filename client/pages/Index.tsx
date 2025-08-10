@@ -171,10 +171,13 @@ export default function Index() {
       {isLoading && (
         <LoadingAnimation onComplete={() => setIsLoading(false)} />
       )}
-      <div className="min-h-screen bg-background" style={{
-        opacity: isLoading ? 0 : 1,
-        transition: 'opacity 0.8s ease-in-out'
-      }}>
+      <div
+        className="min-h-screen bg-background"
+        style={{
+          opacity: isLoading ? 0 : 1,
+          transition: 'opacity 0.8s ease-in-out'
+        }}
+      >
       {/* Navigation */}
       <nav
         className={`fixed top-0 w-full z-50 transition-all duration-300 ${
