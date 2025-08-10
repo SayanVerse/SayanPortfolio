@@ -515,6 +515,7 @@ export default function Index() {
             <Button
               size="lg"
               className="text-lg px-8 py-6 glow-button relative overflow-hidden"
+              onClick={() => window.open('sms:+919609800163', '_self')}
             >
               <Mail className="w-5 h-5 mr-2" />
               Send Message
@@ -523,6 +524,7 @@ export default function Index() {
               variant="outline"
               size="lg"
               className="text-lg px-8 py-6 glow-button relative overflow-hidden"
+              onClick={() => window.open('tel:+919609800163', '_self')}
             >
               <Phone className="w-5 h-5 mr-2" />
               Call Me
