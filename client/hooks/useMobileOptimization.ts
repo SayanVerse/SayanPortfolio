@@ -14,15 +14,6 @@ export function useMobileOptimization() {
         .animated-bg {
           animation-duration: 40s !important;
         }
-        .floating-orb {
-          animation-duration: 25s !important;
-        }
-        .quantum-particle {
-          animation-duration: 30s !important;
-        }
-        .network-node {
-          animation-duration: 15s !important;
-        }
         .matrix-char {
           animation-duration: 15s !important;
         }
