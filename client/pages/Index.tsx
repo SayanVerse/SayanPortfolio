@@ -303,7 +303,7 @@ export default function Index() {
       {/* About Section */}
       <section
         id="about"
-        className="py-20 bg-muted/50 fade-in-up relative overflow-hidden"
+        className="py-20 fade-in-up relative overflow-hidden animated-bg"
       >
         <AdvancedBackground />
         <div className="max-w-6xl mx-auto px-6">
