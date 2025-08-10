@@ -234,22 +234,27 @@ export default function Index() {
         id="home"
         className="min-h-screen flex items-center justify-center relative overflow-hidden animated-bg"
       >
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-violet-100/20 dark:to-violet-900/20"></div>
+        {/* Advanced Background System */}
+        <AdvancedBackground />
 
-        {/* Animated background elements */}
-        <div className="floating-elements"></div>
+        {/* Floating Orbs */}
+        <div className="floating-elements">
+          <div className="floating-orb orb-1"></div>
+          <div className="floating-orb orb-2"></div>
+          <div className="floating-orb orb-3"></div>
+        </div>
 
-        {/* Floating particles */}
-        <div className="particles">
-          <div className="particle"></div>
-          <div className="particle"></div>
-          <div className="particle"></div>
-          <div className="particle"></div>
-          <div className="particle"></div>
-          <div className="particle"></div>
-          <div className="particle"></div>
-          <div className="particle"></div>
-          <div className="particle"></div>
+        {/* Quantum Particles */}
+        <div className="quantum-particles">
+          <div className="quantum-particle"></div>
+          <div className="quantum-particle"></div>
+          <div className="quantum-particle"></div>
+          <div className="quantum-particle"></div>
+          <div className="quantum-particle"></div>
+          <div className="quantum-particle"></div>
+          <div className="quantum-particle"></div>
+          <div className="quantum-particle"></div>
+          <div className="quantum-particle"></div>
         </div>
         <div className="relative z-10 text-center max-w-4xl mx-auto px-6 flex flex-col">
           <div className="mb-8">
