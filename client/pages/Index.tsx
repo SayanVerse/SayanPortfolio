@@ -2,6 +2,9 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { LiveClock } from "@/components/ui/live-clock";
+import { useInteractiveBackground } from "@/hooks/useInteractiveBackground";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import {
   Github,
   Linkedin,
@@ -22,6 +25,10 @@ import {
 export default function Index() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [darkMode, setDarkMode] = useState(false);
+
+  // Initialize interactive features
+  useInteractiveBackground();
+  useScrollAnimation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -158,7 +165,10 @@ export default function Index() {
       >
         <div className="max-w-6xl mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
-            <div className="text-xl font-bold gradient-text">Portfolio</div>
+            <div className="flex flex-col space-y-2">
+              <div className="text-xl font-bold gradient-text">Portfolio</div>
+              <LiveClock className="scale-75 origin-left" />
+            </div>
             <div className="flex items-center space-x-8">
               {/* Mobile dark mode toggle */}
               <Button
@@ -262,7 +272,7 @@ export default function Index() {
             <Button
               onClick={() => scrollToSection("projects")}
               size="lg"
-              className="text-lg px-8 py-6"
+              className="text-lg px-8 py-6 glow-button relative overflow-hidden"
             >
               View My Work
             </Button>
@@ -270,7 +280,7 @@ export default function Index() {
               onClick={() => scrollToSection("contact")}
               variant="outline"
               size="lg"
-              className="text-lg px-8 py-6"
+              className="text-lg px-8 py-6 glow-button relative overflow-hidden"
             >
               Get In Touch
             </Button>
@@ -280,7 +290,7 @@ export default function Index() {
               href="https://github.com/SayanVerse"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-primary transition-colors"
+              className="text-muted-foreground hover:text-primary transition-colors animated-icon"
             >
               <Github className="w-6 h-6" />
             </a>
@@ -288,31 +298,31 @@ export default function Index() {
               href="https://www.linkedin.com/in/sayan-maiti-9425b431b"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-primary transition-colors"
+              className="text-muted-foreground hover:text-primary transition-colors animated-icon"
             >
               <Linkedin className="w-6 h-6" />
             </a>
             <a
               href="mailto:sayan.official.2024@gmail.com"
-              className="text-muted-foreground hover:text-primary transition-colors"
+              className="text-muted-foreground hover:text-primary transition-colors animated-icon"
             >
               <Mail className="w-6 h-6" />
             </a>
           </div>
         </div>
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 bounce-slow">
           <ChevronDown
-            className="w-6 h-6 text-muted-foreground cursor-pointer"
+            className="w-6 h-6 text-muted-foreground cursor-pointer animated-icon"
             onClick={() => scrollToSection("about")}
           />
         </div>
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-20 bg-muted/50">
+      <section id="about" className="py-20 bg-muted/50 fade-in-up">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">About Me</h2>
+          <div className="text-center mb-16 fade-in-up stagger-1">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 glow-text">About Me</h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
               <div>
                 <span>
@@ -352,7 +362,7 @@ export default function Index() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start justify-start">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start justify-start fade-in-up stagger-2">
             <div>
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
@@ -438,18 +448,18 @@ export default function Index() {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="py-20">
+      <section id="projects" className="py-20 fade-in-up">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Featured Projects
-            </h2>
+          <div className="text-center mb-16 fade-in-up stagger-1">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 glow-text">
+            Featured Projects
+          </h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
               A showcase of my recent work and personal projects
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 fade-in-up stagger-2">
             {projects.map((project, index) => (
               <Card
                 key={index}
@@ -495,9 +505,9 @@ export default function Index() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 bg-muted/50">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+      <section id="contact" className="py-20 bg-muted/50 fade-in-up">
+        <div className="max-w-4xl mx-auto px-6 text-center fade-in-up stagger-1">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 glow-text">
             Let's Work Together
           </h2>
           <p className="text-muted-foreground text-lg mb-8 max-w-2xl mx-auto">
@@ -505,19 +515,19 @@ export default function Index() {
             we can bring your ideas to life.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Button size="lg" className="text-lg px-8 py-6">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 fade-in-up stagger-2">
+            <Button size="lg" className="text-lg px-8 py-6 glow-button relative overflow-hidden">
               <Mail className="w-5 h-5 mr-2" />
               Send Message
             </Button>
-            <Button variant="outline" size="lg" className="text-lg px-8 py-6">
+            <Button variant="outline" size="lg" className="text-lg px-8 py-6 glow-button relative overflow-hidden">
               <Phone className="w-5 h-5 mr-2" />
               Call Me
             </Button>
             <Button
               variant="outline"
               size="lg"
-              className="text-lg px-8 py-6"
+              className="text-lg px-8 py-6 glow-button relative overflow-hidden"
               onClick={openCalendarScheduling}
             >
               <Calendar className="w-5 h-5 mr-2" />
@@ -525,7 +535,7 @@ export default function Index() {
             </Button>
           </div>
 
-          <div className="flex flex-col sm:flex-row justify-center items-center gap-6">
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-6 fade-in-up stagger-3">
             <a
               href="mailto:sayan.official.2024@gmail.com"
               className="flex items-center space-x-2 text-muted-foreground hover:text-primary transition-colors"
@@ -563,7 +573,7 @@ export default function Index() {
                 href="https://github.com/SayanVerse"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-primary transition-colors"
+                className="text-muted-foreground hover:text-primary transition-colors animated-icon"
               >
                 <Github className="w-5 h-5" />
               </a>
@@ -571,13 +581,13 @@ export default function Index() {
                 href="https://www.linkedin.com/in/sayan-maiti-9425b431b"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-primary transition-colors"
+                className="text-muted-foreground hover:text-primary transition-colors animated-icon"
               >
                 <Linkedin className="w-5 h-5" />
               </a>
               <a
                 href="mailto:sayan.official.2024@gmail.com"
-                className="text-muted-foreground hover:text-primary transition-colors"
+                className="text-muted-foreground hover:text-primary transition-colors animated-icon"
               >
                 <Mail className="w-5 h-5" />
               </a>
