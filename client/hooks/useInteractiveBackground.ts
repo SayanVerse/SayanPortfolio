@@ -4,24 +4,7 @@ export function useInteractiveBackground() {
   const trailRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    const trail = document.createElement("div");
-    trail.className = "mouse-trail";
-    document.body.appendChild(trail);
-    trailRef.current = trail;
-
-    const handleMouseMove = (e: MouseEvent) => {
-      if (trailRef.current) {
-        trailRef.current.style.left = e.clientX + "px";
-        trailRef.current.style.top = e.clientY + "px";
-        trailRef.current.style.opacity = "1";
-      }
-    };
-
-    const handleMouseLeave = () => {
-      if (trailRef.current) {
-        trailRef.current.style.opacity = "0";
-      }
-    };
+    // Cursor animation removed as requested
 
     const handleClick = (e: MouseEvent) => {
       const ripple = document.createElement("div");
@@ -54,19 +37,12 @@ export function useInteractiveBackground() {
       }
     };
 
-    document.addEventListener("mousemove", handleMouseMove);
-    document.addEventListener("mouseleave", handleMouseLeave);
     document.addEventListener("click", handleClick);
     document.addEventListener("touchstart", handleTouch);
 
     return () => {
-      document.removeEventListener("mousemove", handleMouseMove);
-      document.removeEventListener("mouseleave", handleMouseLeave);
       document.removeEventListener("click", handleClick);
       document.removeEventListener("touchstart", handleTouch);
-      if (trailRef.current) {
-        trailRef.current.remove();
-      }
     };
   }, []);
 }

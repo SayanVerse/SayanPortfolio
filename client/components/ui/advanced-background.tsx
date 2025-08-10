@@ -7,76 +7,7 @@ export function AdvancedBackground() {
     const container = containerRef.current;
     if (!container) return;
 
-    // Create geometric network
-    const createNetworkNodes = () => {
-      const networkContainer = container.querySelector(".geometric-network");
-      if (!networkContainer) return;
-
-      // Clear existing nodes
-      networkContainer.innerHTML = "";
-
-      // Reduce nodes on mobile for better performance
-      const nodeCount = window.innerWidth < 768 ? 8 : 15;
-      const nodes: { x: number; y: number; element: HTMLElement }[] = [];
-
-      // Create nodes
-      for (let i = 0; i < nodeCount; i++) {
-        const node = document.createElement("div");
-        node.className = "network-node";
-
-        const x = Math.random() * 100;
-        const y = Math.random() * 100;
-
-        node.style.left = x + "%";
-        node.style.top = y + "%";
-        node.style.animationDelay = Math.random() * 8 + "s";
-
-        // Tech-inspired colors
-        const colors = [
-          "rgba(59, 130, 246, 0.9)", // Blue
-          "rgba(14, 165, 233, 0.9)", // Sky blue
-          "rgba(6, 182, 212, 0.9)", // Cyan
-          "rgba(16, 185, 129, 0.9)", // Emerald
-          "rgba(139, 92, 246, 0.9)", // Violet
-        ];
-        node.style.background =
-          colors[Math.floor(Math.random() * colors.length)];
-        node.style.boxShadow = `0 0 20px ${colors[Math.floor(Math.random() * colors.length)]}`;
-
-        networkContainer.appendChild(node);
-        nodes.push({ x, y, element: node });
-      }
-
-      // Create connecting lines
-      for (let i = 0; i < nodes.length; i++) {
-        for (let j = i + 1; j < nodes.length; j++) {
-          const distance = Math.sqrt(
-            Math.pow(nodes[i].x - nodes[j].x, 2) +
-              Math.pow(nodes[i].y - nodes[j].y, 2),
-          );
-
-          // Only connect nearby nodes
-          if (distance < 25) {
-            const line = document.createElement("div");
-            line.className = "network-line";
-
-            const angle = Math.atan2(
-              nodes[j].y - nodes[i].y,
-              nodes[j].x - nodes[i].x,
-            );
-            const length = distance;
-
-            line.style.left = nodes[i].x + "%";
-            line.style.top = nodes[i].y + "%";
-            line.style.width = length + "%";
-            line.style.transform = `rotate(${angle}rad)`;
-            line.style.animationDelay = Math.random() * 4 + "s";
-
-            networkContainer.appendChild(line);
-          }
-        }
-      }
-    };
+    // Network nodes removed as requested (transparent blue balls/squares)
 
     // Create digital matrix effect
     const createMatrixEffect = () => {
@@ -142,15 +73,9 @@ export function AdvancedBackground() {
       }
     };
 
-    // Initialize all effects
-    createNetworkNodes();
+    // Initialize effects (removed network nodes)
     createMatrixEffect();
     createConstellation();
-
-    // Refresh effects periodically
-    const refreshInterval = setInterval(() => {
-      createNetworkNodes();
-    }, 15000);
 
     const matrixInterval = setInterval(() => {
       const matrixContainer = container.querySelector(".digital-matrix");
@@ -161,7 +86,6 @@ export function AdvancedBackground() {
     }, 12000);
 
     return () => {
-      clearInterval(refreshInterval);
       clearInterval(matrixInterval);
     };
   }, []);
@@ -174,18 +98,10 @@ export function AdvancedBackground() {
       {/* Tech Grid Background */}
       <div className="tech-grid"></div>
 
-      {/* Geometric Network Layer */}
-      <div className="geometric-network"></div>
-
-      {/* Morphing Blobs Layer */}
-      <div className="morphing-blob blob-1"></div>
-      <div className="morphing-blob blob-2"></div>
-      <div className="morphing-blob blob-3"></div>
-
-      {/* Digital Matrix Layer */}
+      {/* Digital Matrix Layer - Keep as requested */}
       <div className="digital-matrix"></div>
 
-      {/* Constellation Layer */}
+      {/* Constellation Layer - Keep as requested */}
       <div className="constellation-bg"></div>
     </div>
   );

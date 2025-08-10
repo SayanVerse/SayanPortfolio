@@ -267,25 +267,7 @@ export default function Index() {
         {/* Advanced Background System */}
         <AdvancedBackground />
 
-        {/* Floating Orbs */}
-        <div className="floating-elements">
-          <div className="floating-orb orb-1"></div>
-          <div className="floating-orb orb-2"></div>
-          <div className="floating-orb orb-3"></div>
-        </div>
-
-        {/* Quantum Particles */}
-        <div className="quantum-particles">
-          <div className="quantum-particle"></div>
-          <div className="quantum-particle"></div>
-          <div className="quantum-particle"></div>
-          <div className="quantum-particle"></div>
-          <div className="quantum-particle"></div>
-          <div className="quantum-particle"></div>
-          <div className="quantum-particle"></div>
-          <div className="quantum-particle"></div>
-          <div className="quantum-particle"></div>
-        </div>
+        {/* Removed floating orbs and quantum particles as requested */}
         <div className="relative z-10 text-center max-w-4xl mx-auto px-6 flex flex-col">
           <div className="mb-8">
             <div className="w-32 h-32 mx-auto mb-8 rounded-full bg-gradient-to-r from-primary to-violet-600 p-1">
