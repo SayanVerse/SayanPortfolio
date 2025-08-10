@@ -225,63 +225,69 @@ export default function Index() {
                   className="md:hidden flex flex-col space-y-1 p-2 rounded-lg hover:bg-primary/10 transition-colors"
                   aria-label="Toggle mobile menu"
                 >
-                  <div className={`w-6 h-0.5 bg-foreground transition-all duration-300 ${
-                    isMobileMenuOpen ? 'rotate-45 translate-y-2' : ''
-                  }`}></div>
-                  <div className={`w-6 h-0.5 bg-foreground transition-all duration-300 ${
-                    isMobileMenuOpen ? 'opacity-0' : ''
-                  }`}></div>
-                  <div className={`w-6 h-0.5 bg-foreground transition-all duration-300 ${
-                    isMobileMenuOpen ? '-rotate-45 -translate-y-2' : ''
-                  }`}></div>
+                  <div
+                    className={`w-6 h-0.5 bg-foreground transition-all duration-300 ${
+                      isMobileMenuOpen ? "rotate-45 translate-y-2" : ""
+                    }`}
+                  ></div>
+                  <div
+                    className={`w-6 h-0.5 bg-foreground transition-all duration-300 ${
+                      isMobileMenuOpen ? "opacity-0" : ""
+                    }`}
+                  ></div>
+                  <div
+                    className={`w-6 h-0.5 bg-foreground transition-all duration-300 ${
+                      isMobileMenuOpen ? "-rotate-45 -translate-y-2" : ""
+                    }`}
+                  ></div>
                 </button>
               </div>
             </div>
           </div>
-      </nav>
+        </nav>
 
-      {/* Mobile Menu Overlay */}
-      {isMobileMenuOpen && (
-        <div className="fixed inset-0 z-40 md:hidden">
-          {/* Faded background */}
-          <div
-            className="absolute inset-0 bg-black/60 backdrop-blur-sm"
-            onClick={() => setIsMobileMenuOpen(false)}
-          ></div>
+        {/* Mobile Menu Overlay */}
+        {isMobileMenuOpen && (
+          <div className="fixed inset-0 z-40 md:hidden">
+            {/* Faded background */}
+            <div
+              className="absolute inset-0 bg-black/60 backdrop-blur-sm"
+              onClick={() => setIsMobileMenuOpen(false)}
+            ></div>
 
-          {/* Menu content */}
-          <div className="absolute top-20 right-6 bg-background/90 backdrop-blur-lg border border-border rounded-lg shadow-2xl min-w-[200px]">
-            <div className="flex flex-col py-4">
-              <button
-                onClick={() => scrollToSection("home")}
-                className="px-6 py-4 text-left text-foreground hover:text-primary hover:bg-primary/10 transition-colors border-b border-border/50"
-              >
-                Home
-              </button>
-              <button
-                onClick={() => scrollToSection("about")}
-                className="px-6 py-4 text-left text-foreground hover:text-primary hover:bg-primary/10 transition-colors border-b border-border/50"
-              >
-                About
-              </button>
-              <button
-                onClick={() => scrollToSection("projects")}
-                className="px-6 py-4 text-left text-foreground hover:text-primary hover:bg-primary/10 transition-colors border-b border-border/50"
-              >
-                Projects
-              </button>
-              <button
-                onClick={() => scrollToSection("contact")}
-                className="px-6 py-4 text-left text-foreground hover:text-primary hover:bg-primary/10 transition-colors"
-              >
-                Contact
-              </button>
+            {/* Menu content */}
+            <div className="absolute top-20 right-6 bg-background/90 backdrop-blur-lg border border-border rounded-lg shadow-2xl min-w-[200px]">
+              <div className="flex flex-col py-4">
+                <button
+                  onClick={() => scrollToSection("home")}
+                  className="px-6 py-4 text-left text-foreground hover:text-primary hover:bg-primary/10 transition-colors border-b border-border/50"
+                >
+                  Home
+                </button>
+                <button
+                  onClick={() => scrollToSection("about")}
+                  className="px-6 py-4 text-left text-foreground hover:text-primary hover:bg-primary/10 transition-colors border-b border-border/50"
+                >
+                  About
+                </button>
+                <button
+                  onClick={() => scrollToSection("projects")}
+                  className="px-6 py-4 text-left text-foreground hover:text-primary hover:bg-primary/10 transition-colors border-b border-border/50"
+                >
+                  Projects
+                </button>
+                <button
+                  onClick={() => scrollToSection("contact")}
+                  className="px-6 py-4 text-left text-foreground hover:text-primary hover:bg-primary/10 transition-colors"
+                >
+                  Contact
+                </button>
+              </div>
             </div>
           </div>
-        </div>
-      )}
+        )}
 
-      {/* Hero Section */}
+        {/* Hero Section */}
         <section
           id="home"
           className="min-h-screen flex items-center justify-center relative overflow-hidden animated-bg"
