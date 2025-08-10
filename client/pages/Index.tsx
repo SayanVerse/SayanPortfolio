@@ -170,13 +170,14 @@ export default function Index() {
               <div className="text-xl font-bold gradient-text">Portfolio</div>
               <LiveClock className="scale-75 origin-left" />
             </div>
-            <div className="flex items-center space-x-8">
-              {/* Mobile dark mode toggle */}
+            <div className="flex items-center space-x-4">
+              {/* Mobile dark mode toggle - Always visible */}
               <Button
                 variant="ghost"
                 size="icon"
                 onClick={() => setDarkMode(!darkMode)}
-                className="md:hidden"
+                className="md:hidden flex-shrink-0"
+                aria-label="Toggle dark mode"
               >
                 {darkMode ? (
                   <Sun className="h-5 w-5" />

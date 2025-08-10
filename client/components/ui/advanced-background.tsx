@@ -157,17 +157,20 @@ export function AdvancedBackground() {
 
   return (
     <div ref={containerRef} className="absolute inset-0 overflow-hidden pointer-events-none">
+      {/* Tech Grid Background */}
+      <div className="tech-grid"></div>
+
       {/* Geometric Network Layer */}
       <div className="geometric-network"></div>
-      
+
       {/* Morphing Blobs Layer */}
       <div className="morphing-blob blob-1"></div>
       <div className="morphing-blob blob-2"></div>
       <div className="morphing-blob blob-3"></div>
-      
+
       {/* Digital Matrix Layer */}
       <div className="digital-matrix"></div>
-      
+
       {/* Constellation Layer */}
       <div className="constellation-bg"></div>
     </div>
