@@ -117,6 +117,20 @@
 
   html {
     scroll-behavior: smooth;
+    /* Optimize for high refresh rates */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Touch optimization for mobile */
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  button, [role="button"] {
+    touch-action: manipulation;
+    -webkit-user-select: none;
+    user-select: none;
   }
 
   .fade-in-up {
@@ -405,10 +419,12 @@
     position: absolute;
     width: 4px;
     height: 4px;
-    background: rgba(124, 59, 237, 0.8);
+    background: rgba(59, 130, 246, 0.8);
     border-radius: 50%;
-    box-shadow: 0 0 20px rgba(124, 59, 237, 0.6);
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.6);
     animation: nodeFloat 8s ease-in-out infinite;
+    will-change: transform, opacity;
+    transform: translate3d(0, 0, 0);
   }
 
   .network-line {
@@ -417,7 +433,7 @@
     background: linear-gradient(
       90deg,
       transparent,
-      rgba(124, 59, 237, 0.3),
+      rgba(59, 130, 246, 0.3),
       transparent
     );
     transform-origin: left center;
@@ -469,11 +485,21 @@
 
   .matrix-char {
     position: absolute;
-    color: rgba(124, 59, 237, 0.4);
+    color: rgba(59, 130, 246, 0.4);
     font-family: "Courier New", monospace;
     font-size: 14px;
     animation: matrixFall 8s linear infinite;
-    text-shadow: 0 0 5px rgba(124, 59, 237, 0.8);
+    text-shadow: 0 0 5px rgba(59, 130, 246, 0.8);
+    will-change: transform, opacity;
+    transform: translate3d(0, 0, 0);
+  }
+
+  /* Reduce matrix complexity on mobile */
+  @media (max-width: 768px) {
+    .matrix-char {
+      font-size: 12px;
+      animation-duration: 12s;
+    }
   }
 
   .constellation-bg {

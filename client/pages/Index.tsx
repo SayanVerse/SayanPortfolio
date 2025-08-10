@@ -196,9 +196,17 @@ export default function Index() {
               <Button
                 variant="ghost"
                 size="icon"
-                onClick={() => setDarkMode(!darkMode)}
-                className="md:hidden flex-shrink-0"
+                onClick={(e) => {
+                  e.preventDefault();
+                  e.stopPropagation();
+                  setDarkMode(!darkMode);
+                }}
+                className="md:hidden flex-shrink-0 touch-manipulation"
                 aria-label="Toggle dark mode"
+                style={{
+                  WebkitTapHighlightColor: 'transparent',
+                  touchAction: 'manipulation'
+                }}
               >
                 {darkMode ? (
                   <Sun className="h-5 w-5" />
