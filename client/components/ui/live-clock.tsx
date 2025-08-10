@@ -34,12 +34,7 @@ export function LiveClock({ className = "" }: LiveClockProps) {
 
   return (
     <div
-      className={`${className} glass rounded-xl p-4 backdrop-blur-md border border-white/10 sm:mr-0`}
-      style={{
-        '@media (max-width: 640px)': {
-          marginRight: '0px'
-        }
-      }}
+      className={`${className} glass rounded-xl p-4 backdrop-blur-md border border-white/10`}
     >
       <div className="text-center space-y-1">
         <div className="text-lg font-mono text-primary glow-text">
