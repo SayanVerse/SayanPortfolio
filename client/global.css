@@ -128,6 +128,15 @@
     -webkit-tap-highlight-color: transparent;
   }
 
+  /* Fix clock positioning on mobile */
+  @media (max-width: 640px) {
+    .nav-clock {
+      margin-right: 0 !important;
+      transform: scale(0.6);
+      transform-origin: left center;
+    }
+  }
+
   button,
   [role="button"] {
     touch-action: manipulation;
