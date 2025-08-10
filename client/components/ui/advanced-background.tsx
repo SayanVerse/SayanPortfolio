@@ -15,7 +15,8 @@ export function AdvancedBackground() {
       // Clear existing nodes
       networkContainer.innerHTML = "";
 
-      const nodeCount = 15;
+      // Reduce nodes on mobile for better performance
+      const nodeCount = window.innerWidth < 768 ? 8 : 15;
       const nodes: { x: number; y: number; element: HTMLElement }[] = [];
 
       // Create nodes
@@ -85,9 +86,11 @@ export function AdvancedBackground() {
       const chars =
         "01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン";
       const columns = Math.floor(window.innerWidth / 20);
+      // Reduce matrix density on mobile
+      const sparseFactor = window.innerWidth < 768 ? 0.85 : 0.7;
 
       for (let i = 0; i < columns; i++) {
-        if (Math.random() > 0.7) {
+        if (Math.random() > sparseFactor) {
           // Sparse matrix
           const char = document.createElement("div");
           char.className = "matrix-char";
@@ -118,7 +121,8 @@ export function AdvancedBackground() {
         container.querySelector(".constellation-bg");
       if (!constellationContainer) return;
 
-      const starCount = 50;
+      // Reduce stars on mobile for better performance
+      const starCount = window.innerWidth < 768 ? 25 : 50;
 
       for (let i = 0; i < starCount; i++) {
         const star = document.createElement("div");

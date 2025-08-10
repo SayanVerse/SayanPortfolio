@@ -40,10 +40,29 @@ export default function Index() {
   }, []);
 
   useEffect(() => {
-    if (darkMode) {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
+    // Force apply dark mode changes
+    const applyDarkMode = () => {
+      const htmlElement = document.documentElement;
+      if (darkMode) {
+        htmlElement.classList.add("dark");
+        htmlElement.setAttribute("data-theme", "dark");
+      } else {
+        htmlElement.classList.remove("dark");
+        htmlElement.setAttribute("data-theme", "light");
+      }
+    };
+
+    // Apply immediately
+    applyDarkMode();
+
+    // Force a repaint on mobile devices
+    if (typeof window !== 'undefined') {
+      requestAnimationFrame(() => {
+        document.body.style.transform = 'translateZ(0)';
+        setTimeout(() => {
+          document.body.style.transform = '';
+        }, 10);
+      });
     }
   }, [darkMode]);
 
