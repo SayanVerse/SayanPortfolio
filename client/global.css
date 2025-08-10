@@ -127,7 +127,8 @@
     -webkit-tap-highlight-color: transparent;
   }
 
-  button, [role="button"] {
+  button,
+  [role="button"] {
     touch-action: manipulation;
     -webkit-user-select: none;
     user-select: none;

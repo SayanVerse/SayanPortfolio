@@ -58,11 +58,11 @@ export default function Index() {
     applyDarkMode();
 
     // Force a repaint on mobile devices
-    if (typeof window !== 'undefined') {
+    if (typeof window !== "undefined") {
       requestAnimationFrame(() => {
-        document.body.style.transform = 'translateZ(0)';
+        document.body.style.transform = "translateZ(0)";
         setTimeout(() => {
-          document.body.style.transform = '';
+          document.body.style.transform = "";
         }, 10);
       });
     }
@@ -204,8 +204,8 @@ export default function Index() {
                 className="md:hidden flex-shrink-0 touch-manipulation"
                 aria-label="Toggle dark mode"
                 style={{
-                  WebkitTapHighlightColor: 'transparent',
-                  touchAction: 'manipulation'
+                  WebkitTapHighlightColor: "transparent",
+                  touchAction: "manipulation",
                 }}
               >
                 {darkMode ? (
