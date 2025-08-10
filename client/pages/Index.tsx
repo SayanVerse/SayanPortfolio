@@ -263,7 +263,7 @@ export default function Index() {
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto">
             &nbsp;— 🚀 an aspiring CSE engineer passionate about 💻 coding, 🧠
-            problem-solving, and ⚡  building creative tech solutions.
+            problem-solving, and ⚡ building creative tech solutions.
             <div>
               <br />
             </div>
@@ -322,7 +322,9 @@ export default function Index() {
       <section id="about" className="py-20 bg-muted/50 fade-in-up">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-16 fade-in-up stagger-1">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 glow-text">About Me</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 glow-text">
+              About Me
+            </h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
               <div>
                 <span>
@@ -451,9 +453,9 @@ export default function Index() {
       <section id="projects" className="py-20 fade-in-up">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-16 fade-in-up stagger-1">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 glow-text">
-            Featured Projects
-          </h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 glow-text">
+              Featured Projects
+            </h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
               A showcase of my recent work and personal projects
             </p>
@@ -516,11 +518,18 @@ export default function Index() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 fade-in-up stagger-2">
-            <Button size="lg" className="text-lg px-8 py-6 glow-button relative overflow-hidden">
+            <Button
+              size="lg"
+              className="text-lg px-8 py-6 glow-button relative overflow-hidden"
+            >
               <Mail className="w-5 h-5 mr-2" />
               Send Message
             </Button>
-            <Button variant="outline" size="lg" className="text-lg px-8 py-6 glow-button relative overflow-hidden">
+            <Button
+              variant="outline"
+              size="lg"
+              className="text-lg px-8 py-6 glow-button relative overflow-hidden"
+            >
               <Phone className="w-5 h-5 mr-2" />
               Call Me
             </Button>

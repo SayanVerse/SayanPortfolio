@@ -1,10 +1,10 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 
 interface LiveClockProps {
   className?: string;
 }
 
-export function LiveClock({ className = '' }: LiveClockProps) {
+export function LiveClock({ className = "" }: LiveClockProps) {
   const [time, setTime] = useState(new Date());
 
   useEffect(() => {
@@ -16,24 +16,26 @@ export function LiveClock({ className = '' }: LiveClockProps) {
   }, []);
 
   const formatTime = (date: Date) => {
-    return date.toLocaleTimeString('en-US', {
-      hour: '2-digit',
-      minute: '2-digit',
-      second: '2-digit',
+    return date.toLocaleTimeString("en-US", {
+      hour: "2-digit",
+      minute: "2-digit",
+      second: "2-digit",
       hour12: true,
     });
   };
 
   const formatDate = (date: Date) => {
-    return date.toLocaleDateString('en-US', {
-      weekday: 'short',
-      month: 'short',
-      day: 'numeric',
+    return date.toLocaleDateString("en-US", {
+      weekday: "short",
+      month: "short",
+      day: "numeric",
     });
   };
 
   return (
-    <div className={`${className} glass rounded-xl p-4 backdrop-blur-md border border-white/10`}>
+    <div
+      className={`${className} glass rounded-xl p-4 backdrop-blur-md border border-white/10`}
+    >
       <div className="text-center space-y-1">
         <div className="text-lg font-mono text-primary glow-text">
           {formatTime(time)}
