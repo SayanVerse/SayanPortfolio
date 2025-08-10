@@ -30,12 +30,13 @@ export function AdvancedBackground() {
         node.style.top = y + '%';
         node.style.animationDelay = Math.random() * 8 + 's';
         
-        // Randomize colors
+        // Tech-inspired colors
         const colors = [
-          'rgba(124, 59, 237, 0.8)',
-          'rgba(168, 85, 247, 0.8)',
-          'rgba(236, 72, 153, 0.8)',
-          'rgba(59, 130, 246, 0.8)'
+          'rgba(59, 130, 246, 0.9)',   // Blue
+          'rgba(14, 165, 233, 0.9)',   // Sky blue
+          'rgba(6, 182, 212, 0.9)',    // Cyan
+          'rgba(16, 185, 129, 0.9)',   // Emerald
+          'rgba(139, 92, 246, 0.9)'    // Violet
         ];
         node.style.background = colors[Math.floor(Math.random() * colors.length)];
         node.style.boxShadow = `0 0 20px ${colors[Math.floor(Math.random() * colors.length)]}`;
@@ -89,9 +90,16 @@ export function AdvancedBackground() {
           char.style.animationDelay = Math.random() * 8 + 's';
           char.style.animationDuration = (8 + Math.random() * 4) + 's';
           
-          // Randomize color variations
-          const opacity = 0.2 + Math.random() * 0.3;
-          char.style.color = `rgba(124, 59, 237, ${opacity})`;
+          // Tech color variations
+          const colors = [
+            '59, 130, 246',    // Blue
+            '14, 165, 233',    // Sky
+            '6, 182, 212',     // Cyan
+            '16, 185, 129'     // Emerald
+          ];
+          const color = colors[Math.floor(Math.random() * colors.length)];
+          const opacity = 0.2 + Math.random() * 0.4;
+          char.style.color = `rgba(${color}, ${opacity})`;
           
           matrixContainer.appendChild(char);
         }
