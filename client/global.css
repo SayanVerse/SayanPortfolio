@@ -181,20 +181,11 @@
       linear-gradient(rgba(59, 130, 246, 0.03) 1px, transparent 1px),
       linear-gradient(90deg, rgba(59, 130, 246, 0.03) 1px, transparent 1px);
     background-size: 50px 50px;
-    animation: gridMove 30s linear infinite;
     z-index: -3;
     will-change: transform;
     transform: translate3d(0, 0, 0);
   }
 
-  @keyframes gridMove {
-    0% {
-      transform: translate3d(0, 0, 0);
-    }
-    100% {
-      transform: translate3d(50px, 50px, 0);
-    }
-  }
 
   @keyframes float {
     0%, 100% {
@@ -416,7 +407,6 @@
     background-size:
       400% 400%,
       300% 300%;
-    animation: techBackgroundMove 25s ease infinite;
     z-index: -1;
   }
 
@@ -435,7 +425,6 @@
       rgba(14, 165, 233, 0.02) 270deg,
       transparent 360deg
     );
-    animation: techConicRotate 40s linear infinite;
     z-index: -2;
   }
 
@@ -537,43 +526,7 @@
     }
   }
 
-  @keyframes techBackgroundMove {
-    0%,
-    100% {
-      background-position:
-        0% 0%,
-        100% 100%;
-    }
-    20% {
-      background-position:
-        80% 20%,
-        20% 80%;
-    }
-    40% {
-      background-position:
-        100% 50%,
-        0% 50%;
-    }
-    60% {
-      background-position:
-        20% 80%,
-        80% 20%;
-    }
-    80% {
-      background-position:
-        50% 100%,
-        50% 0%;
-    }
-  }
 
-  @keyframes techConicRotate {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
-  }
 
   /* nodeFloat animation removed with network nodes */
 
