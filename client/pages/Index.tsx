@@ -499,7 +499,7 @@ export default function Index() {
       {/* Contact Section */}
       <section
         id="contact"
-        className="py-20 bg-muted/50 fade-in-up relative overflow-hidden animated-bg"
+        className="py-20 fade-in-up relative overflow-hidden animated-bg"
       >
         <AdvancedBackground />
         <div className="max-w-4xl mx-auto px-6 text-center fade-in-up stagger-1">
