@@ -332,7 +332,7 @@
 
   .glow-button:hover {
     background: rgba(255, 255, 255, 0.15);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(20px) saturate(200%);
     box-shadow:
       0 12px 40px rgba(59, 130, 246, 0.3),
       0 0 20px rgba(59, 130, 246, 0.2),
@@ -342,7 +342,7 @@
 
   .dark .glow-button:hover {
     background: rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(20px) saturate(200%);
     box-shadow:
       0 12px 40px rgba(59, 130, 246, 0.4),
       0 0 20px rgba(59, 130, 246, 0.3),
