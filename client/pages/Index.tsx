@@ -208,19 +208,19 @@ export default function Index() {
                     Home
                   </button>
                   <button
-                    onClick={() => scrollToSection("about")}
+                    onClick={() => openSectionInNewTab("about")}
                     className="text-foreground hover:text-primary transition-colors"
                   >
                     About
                   </button>
                   <button
-                    onClick={() => scrollToSection("projects")}
+                    onClick={() => openSectionInNewTab("projects")}
                     className="text-foreground hover:text-primary transition-colors"
                   >
                     Projects
                   </button>
                   <button
-                    onClick={() => scrollToSection("contact")}
+                    onClick={() => openSectionInNewTab("contact")}
                     className="text-foreground hover:text-primary transition-colors"
                   >
                     Contact
@@ -266,31 +266,31 @@ export default function Index() {
             {/* Menu content */}
             <div className="absolute top-20 right-6 bg-background/90 backdrop-blur-lg border border-border rounded-lg shadow-2xl min-w-[200px]">
               <div className="flex flex-col py-4">
-                <button
-                  onClick={() => scrollToSection("home")}
-                  className="px-6 py-4 text-left text-foreground hover:text-primary hover:bg-primary/10 transition-colors border-b border-border/50"
-                >
-                  Home
-                </button>
-                <button
-                  onClick={() => scrollToSection("about")}
-                  className="px-6 py-4 text-left text-foreground hover:text-primary hover:bg-primary/10 transition-colors border-b border-border/50"
-                >
-                  About
-                </button>
-                <button
-                  onClick={() => scrollToSection("projects")}
-                  className="px-6 py-4 text-left text-foreground hover:text-primary hover:bg-primary/10 transition-colors border-b border-border/50"
-                >
-                  Projects
-                </button>
-                <button
-                  onClick={() => scrollToSection("contact")}
-                  className="px-6 py-4 text-left text-foreground hover:text-primary hover:bg-primary/10 transition-colors"
-                >
-                  Contact
-                </button>
-              </div>
+              <button
+                onClick={() => scrollToSection("home")}
+                className="px-6 py-4 text-left text-foreground hover:text-primary hover:bg-primary/10 transition-colors border-b border-border/50"
+              >
+                Home
+              </button>
+              <button
+                onClick={() => openSectionInNewTab("about")}
+                className="px-6 py-4 text-left text-foreground hover:text-primary hover:bg-primary/10 transition-colors border-b border-border/50"
+              >
+                About
+              </button>
+              <button
+                onClick={() => openSectionInNewTab("projects")}
+                className="px-6 py-4 text-left text-foreground hover:text-primary hover:bg-primary/10 transition-colors border-b border-border/50"
+              >
+                Projects
+              </button>
+              <button
+                onClick={() => openSectionInNewTab("contact")}
+                className="px-6 py-4 text-left text-foreground hover:text-primary hover:bg-primary/10 transition-colors"
+              >
+                Contact
+              </button>
+            </div>
             </div>
           </div>
         )}
