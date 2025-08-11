@@ -59,6 +59,13 @@ export default function Index() {
     }
   }, []);
 
+  const openSectionInNewTab = (section: string) => {
+    const currentUrl = window.location.origin + window.location.pathname;
+    const newUrl = `${currentUrl}#${section}`;
+    window.open(newUrl, '_blank');
+    setIsMobileMenuOpen(false); // Close mobile menu after navigation
+  };
+
   const scrollToSection = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
     setIsMobileMenuOpen(false); // Close mobile menu after navigation
