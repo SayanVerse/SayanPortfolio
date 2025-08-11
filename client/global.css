@@ -131,9 +131,11 @@
   /* Fix clock positioning on mobile */
   @media (max-width: 640px) {
     .nav-clock {
-      margin-right: 0 !important;
-      transform: scale(0.6);
-      transform-origin: left center;
+      display: none;
+    }
+
+    .nav-brand {
+      margin-bottom: 0;
     }
   }
 
