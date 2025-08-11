@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { LiveClock } from "@/components/ui/live-clock";
 import { AdvancedBackground } from "@/components/ui/advanced-background";
 import { LoadingAnimation } from "@/components/ui/loading-animation";
+import { AnimatedLogo } from "@/components/ui/animated-logo";
 import { useInteractiveBackground } from "@/hooks/useInteractiveBackground";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { useMobileOptimization } from "@/hooks/useMobileOptimization";
@@ -300,7 +301,7 @@ export default function Index() {
             <div className="mb-8">
               <div className="w-32 h-32 mx-auto mb-8 rounded-full bg-gradient-to-r from-primary to-violet-600 p-1">
                 <div className="w-full h-full rounded-full bg-background flex items-center justify-center">
-                  <Code2 className="w-16 h-16 text-primary" />
+                  <AnimatedLogo />
                 </div>
               </div>
             </div>
