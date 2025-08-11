@@ -274,29 +274,11 @@
     overflow: hidden;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(16px) saturate(180%);
-    border: 2px solid transparent;
-    background-clip: padding-box;
+    border: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow:
       0 8px 32px rgba(59, 130, 246, 0.2),
       inset 0 1px 0 rgba(255, 255, 255, 0.3);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  }
-
-  .glow-button::before {
-    content: "";
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    right: -2px;
-    bottom: -2px;
-    background: linear-gradient(
-      45deg,
-      #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000
-    );
-    border-radius: inherit;
-    z-index: -1;
-    animation: rainbowSpin 3s linear infinite;
-    background-size: 400% 400%;
   }
 
   .dark .glow-button {
