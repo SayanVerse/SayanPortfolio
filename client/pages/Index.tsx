@@ -187,7 +187,7 @@ export default function Index() {
         >
           <div className="max-w-6xl mx-auto px-6 py-4">
             <div className="flex items-center justify-between">
-              <div className="flex flex-col space-y-2 nav-brand">
+              <div className="flex flex-col sm:flex-col space-y-2 nav-brand">
                 <div className="text-xl font-bold gradient-text">Portfolio</div>
                 <LiveClock className="scale-75 origin-left nav-clock" />
               </div>
