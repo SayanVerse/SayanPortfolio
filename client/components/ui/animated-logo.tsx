@@ -1,5 +1,5 @@
 // AnimatedLogo.tsx
-// Rotating white-dot Earth map logo in React + Tailwind
+// Rotating dotted Earth map with transparent background in React + Tailwind
 
 import { useEffect, useRef } from "react";
 import * as THREE from "three";
@@ -17,25 +17,33 @@ export function AnimatedLogo() {
     );
     const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
     renderer.setSize(mountRef.current!.clientWidth, mountRef.current!.clientHeight);
+    renderer.setClearColor(0x000000, 0); // Transparent background
     mountRef.current!.appendChild(renderer.domElement);
 
-    // Create sphere points (white dots)
-    const radius = 2;
-    const sphereGeometry = new THREE.SphereGeometry(radius, 64, 64);
-    const dotMaterial = new THREE.PointsMaterial({ color: 0xffffff, size: 0.025 });
-    const spherePoints = new THREE.Points(sphereGeometry, dotMaterial);
-    scene.add(spherePoints);
+    // Load dotted Earth texture (replace with your transparent dotted map image)
+    const textureLoader = new THREE.TextureLoader();
+    const earthTexture = textureLoader.load("/textures/dotted-earth.png"); // Your dotted map image
+
+    // Create sphere with dotted Earth texture
+    const sphereGeometry = new THREE.SphereGeometry(2, 64, 64);
+    const sphereMaterial = new THREE.MeshBasicMaterial({
+      map: earthTexture,
+      transparent: true,
+    });
+    const earth = new THREE.Mesh(sphereGeometry, sphereMaterial);
+    scene.add(earth);
 
     camera.position.z = 5;
 
+    // Animation loop
     const animate = () => {
       requestAnimationFrame(animate);
-      spherePoints.rotation.y += 0.002; // slow rotation
+      earth.rotation.y += 0.002; // Slow rotation
       renderer.render(scene, camera);
     };
     animate();
 
-    // Resize handling
+    // Handle resize
     const handleResize = () => {
       camera.aspect = mountRef.current!.clientWidth / mountRef.current!.clientHeight;
       camera.updateProjectionMatrix();
@@ -49,7 +57,5 @@ export function AnimatedLogo() {
     };
   }, []);
 
-  return (
-    <div className="w-16 h-16" ref={mountRef}></div>
-  );
+  return <div className="w-24 h-24" ref={mountRef}></div>;
 }
