@@ -317,14 +317,7 @@ export default function Index() {
 
           {/* Removed floating orbs and quantum particles as requested */}
           <div className="relative z-10 text-center max-w-4xl mx-auto px-6 flex flex-col">
-            <div className="mb-8">
-              <div className="w-32 h-32 mx-auto mb-8 rounded-full bg-gradient-to-r from-primary to-violet-600 p-1">
-                <div className="w-full h-full rounded-full bg-background flex items-center justify-center">
-                  <ModernLogo />
-                </div>
-              </div>
-            </div>
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6">
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6">
               Hey, I'm <span className="gradient-text">Sayan Maiti</span>
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto">
