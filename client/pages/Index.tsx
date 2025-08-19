@@ -320,7 +320,7 @@ export default function Index() {
             <div className="mb-8">
               <div className="w-32 h-32 mx-auto mb-8 rounded-full bg-gradient-to-r from-primary to-violet-600 p-1">
                 <div className="w-full h-full rounded-full bg-background flex items-center justify-center">
-                  <EarthLogo />
+                  <ModernLogo />
                 </div>
               </div>
             </div>
