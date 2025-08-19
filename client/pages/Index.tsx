@@ -5,7 +5,6 @@ import { Badge } from "@/components/ui/badge";
 import { LiveClock } from "@/components/ui/live-clock";
 import { AdvancedBackground } from "@/components/ui/advanced-background";
 import { LoadingAnimation } from "@/components/ui/loading-animation";
-import { ModernLogo } from "@/components/ui/modern-logo";
 import { useInteractiveBackground } from "@/hooks/useInteractiveBackground";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { useMobileOptimization } from "@/hooks/useMobileOptimization";
