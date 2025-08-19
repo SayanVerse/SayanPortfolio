@@ -8,6 +8,7 @@ import { LoadingAnimation } from "@/components/ui/loading-animation";
 import { useInteractiveBackground } from "@/hooks/useInteractiveBackground";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { useMobileOptimization } from "@/hooks/useMobileOptimization";
+import { useButtonEffects } from "@/hooks/useButtonEffects";
 import {
   Github,
   Linkedin,
