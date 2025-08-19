@@ -33,6 +33,7 @@ export default function Index() {
   useInteractiveBackground();
   useScrollAnimation();
   useMobileOptimization();
+  useButtonEffects();
 
   useEffect(() => {
     const handleScroll = () => {
