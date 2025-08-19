@@ -333,22 +333,29 @@
   }
 
   .glow-button:hover {
-    background: rgba(255, 255, 255, 0.15);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
+    border: 1px solid rgba(255, 255, 255, 0.4);
     box-shadow:
-      0 12px 40px rgba(59, 130, 246, 0.3),
-      0 0 20px rgba(59, 130, 246, 0.2),
-      inset 0 1px 0 rgba(255, 255, 255, 0.4);
-    transform: translateY(-2px);
+      0 15px 45px rgba(59, 130, 246, 0.4),
+      0 0 30px rgba(59, 130, 246, 0.3),
+      inset 0 1px 0 rgba(255, 255, 255, 0.5),
+      0 0 0 3px rgba(59, 130, 246, 0.2);
+    transform: translateY(-3px) scale(1.02);
   }
 
   .dark .glow-button:hover {
-    background: rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06));
+    border: 1px solid rgba(255, 255, 255, 0.25);
     box-shadow:
-      0 12px 40px rgba(59, 130, 246, 0.4),
-      0 0 20px rgba(59, 130, 246, 0.3),
-      inset 0 1px 0 rgba(255, 255, 255, 0.2);
+      0 15px 45px rgba(59, 130, 246, 0.5),
+      0 0 30px rgba(59, 130, 246, 0.4),
+      inset 0 1px 0 rgba(255, 255, 255, 0.3),
+      0 0 0 3px rgba(59, 130, 246, 0.3);
+  }
+
+  .glow-button:active {
+    transform: translateY(-1px) scale(0.98);
+    transition: all 0.1s ease-out;
   }
 
   .animated-icon {
