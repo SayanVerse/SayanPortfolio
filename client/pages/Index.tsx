@@ -586,6 +586,116 @@ export default function Index() {
           </div>
         </section>
 
+        {/* Certificates Section */}
+        <section
+          id="certificates"
+          className="py-20 bg-muted/50 fade-in-up relative overflow-hidden animated-bg"
+        >
+          <AdvancedBackground />
+          <div className="max-w-6xl mx-auto px-6">
+            <div className="text-center mb-16 fade-in-up stagger-1">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 glow-text">
+                Certificates & Achievements
+              </h2>
+              <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+                My journey of continuous learning and skill development
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 fade-in-up stagger-2">
+              {/* AI for Beginners HP LIFE Certificate */}
+              <Card className="group hover:shadow-lg transition-all duration-300 border-0 shadow-md">
+                <CardContent className="p-6">
+                  <div className="flex items-start space-x-4 mb-4">
+                    <div className="w-12 h-12 rounded-full bg-gradient-to-r from-green-400 to-blue-500 flex items-center justify-center flex-shrink-0">
+                      <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2L13.09 8.26L20 9L13.09 9.74L12 16L10.91 9.74L4 9L10.91 8.26L12 2Z"/>
+                      </svg>
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-xl font-semibold mb-2 group-hover:text-primary transition-colors">
+                        AI for Beginners
+                      </h3>
+                      <p className="text-sm text-muted-foreground mb-2">HP LIFE</p>
+                      <p className="text-xs text-muted-foreground mb-2">Issued Mar 2025</p>
+                      <p className="text-xs text-muted-foreground mb-4">
+                        ID: 06218b60-20f3-41d3-821d-07ed564d15e2
+                      </p>
+                    </div>
+                  </div>
+                  <Button
+                    variant="ghost"
+                    className="p-0 h-auto text-primary hover:text-primary/80"
+                    onClick={() => window.open('https://www.life-global.org/certificate/06218b60-20f3-41d3-821d-07ed564d15e2', '_blank')}
+                  >
+                    View Certificate <ExternalLink className="w-4 h-4 ml-2" />
+                  </Button>
+                </CardContent>
+              </Card>
+
+              {/* Java Basic HackerRank Certificate */}
+              <Card className="group hover:shadow-lg transition-all duration-300 border-0 shadow-md">
+                <CardContent className="p-6">
+                  <div className="flex items-start space-x-4 mb-4">
+                    <div className="w-12 h-12 rounded-full bg-gradient-to-r from-orange-400 to-red-500 flex items-center justify-center flex-shrink-0">
+                      <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M8.851 18.56s-.917.534.653.714c1.902.218 2.874.187 4.969-.211 0 0 .552.346 1.321.646-4.699 2.013-10.633-.118-6.943-1.149M8.276 15.933s-1.028.761.542.924c2.032.209 3.636.227 6.413-.308 0 0 .384.389.987.602-5.679 1.661-12.007.13-7.942-1.218M13.116 11.475c1.158 1.333-.304 2.533-.304 2.533s2.939-1.518 1.589-3.418c-1.261-1.772-2.228-2.652 3.007-5.688 0-.001-8.216 2.051-4.292 6.573M19.33 20.504s.679.559-.747.991c-2.712.822-11.288 1.069-13.669.033-.856-.373.75-.89 1.254-.998.527-.114.828-.093.828-.093-.953-.671-6.156 1.317-2.643 1.887 9.58 1.553 17.462-.7 14.977-1.82M9.292 13.21s-4.362 1.036-1.544 1.412c1.189.159 3.561.123 5.77-.062 1.806-.152 3.618-.477 3.618-.477s-.637.272-1.098.587c-4.429 1.165-12.986.623-10.522-.568 2.082-1.006 3.776-.892 3.776-.892M17.116 17.584c4.503-2.34 2.421-4.589.968-4.285-.355.074-.515.138-.515.138s.132-.207.385-.297c2.875-1.011 5.086 2.981-.928 4.562 0-.001.07-.062.09-.118M14.401 0s2.494 2.494-2.365 6.33c-3.896 3.077-.888 4.832-.001 6.836-2.274-2.053-3.943-3.858-2.824-5.539 1.644-2.469 6.197-3.665 5.19-7.627M9.734 23.924c4.322.277 10.959-.153 11.116-2.198 0 0-.302.775-3.572 1.391-3.688.694-8.239.613-10.937.168 0-.001.553.457 3.393.639"/>
+                      </svg>
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-xl font-semibold mb-2 group-hover:text-primary transition-colors">
+                        Java (Basic)
+                      </h3>
+                      <p className="text-sm text-muted-foreground mb-2">HackerRank</p>
+                      <p className="text-xs text-muted-foreground mb-2">Issued Feb 2025</p>
+                      <p className="text-xs text-muted-foreground mb-4">
+                        ID: B5B3A86A574F
+                      </p>
+                    </div>
+                  </div>
+                  <Button
+                    variant="ghost"
+                    className="p-0 h-auto text-primary hover:text-primary/80"
+                    onClick={() => window.open('https://www.hackerrank.com/certificates/b5b3a86a574f', '_blank')}
+                  >
+                    View Certificate <ExternalLink className="w-4 h-4 ml-2" />
+                  </Button>
+                </CardContent>
+              </Card>
+
+              {/* Problem Solving Basic HackerRank Certificate */}
+              <Card className="group hover:shadow-lg transition-all duration-300 border-0 shadow-md">
+                <CardContent className="p-6">
+                  <div className="flex items-start space-x-4 mb-4">
+                    <div className="w-12 h-12 rounded-full bg-gradient-to-r from-purple-400 to-pink-500 flex items-center justify-center flex-shrink-0">
+                      <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0L19.2 12l-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/>
+                      </svg>
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-xl font-semibold mb-2 group-hover:text-primary transition-colors">
+                        Problem Solving (Basic)
+                      </h3>
+                      <p className="text-sm text-muted-foreground mb-2">HackerRank</p>
+                      <p className="text-xs text-muted-foreground mb-2">Issued Feb 2025</p>
+                      <p className="text-xs text-muted-foreground mb-4">
+                        ID: 6AC58A65F3C1
+                      </p>
+                    </div>
+                  </div>
+                  <Button
+                    variant="ghost"
+                    className="p-0 h-auto text-primary hover:text-primary/80"
+                    onClick={() => window.open('https://www.hackerrank.com/certificates/6ac58a65f3c1', '_blank')}
+                  >
+                    View Certificate <ExternalLink className="w-4 h-4 ml-2" />
+                  </Button>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
+
         {/* Contact Section */}
         <section
           id="contact"
