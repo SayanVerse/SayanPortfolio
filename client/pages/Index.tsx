@@ -220,6 +220,12 @@ export default function Index() {
                     Projects
                   </button>
                   <button
+                    onClick={() => openSectionInNewTab("certificates")}
+                    className="text-foreground hover:text-primary transition-colors"
+                  >
+                    Certificates
+                  </button>
+                  <button
                     onClick={() => openSectionInNewTab("contact")}
                     className="text-foreground hover:text-primary transition-colors"
                   >
@@ -283,6 +289,12 @@ export default function Index() {
                 className="px-6 py-4 text-left text-foreground hover:text-primary hover:bg-primary/10 transition-colors border-b border-border/50"
               >
                 Projects
+              </button>
+              <button
+                onClick={() => openSectionInNewTab("certificates")}
+                className="px-6 py-4 text-left text-foreground hover:text-primary hover:bg-primary/10 transition-colors border-b border-border/50"
+              >
+                Certificates
               </button>
               <button
                 onClick={() => openSectionInNewTab("contact")}
