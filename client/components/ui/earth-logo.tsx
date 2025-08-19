@@ -7,18 +7,18 @@ export function EarthLogo() {
         alt="Earth"
         className="w-full h-full object-contain"
         style={{
-          animation: 'earthRotation 20s linear infinite',
-          filter: 'drop-shadow(0 0 10px rgba(59, 130, 246, 0.3))'
+          animation: "earthRotation 20s linear infinite",
+          filter: "drop-shadow(0 0 10px rgba(59, 130, 246, 0.3))",
         }}
       />
-      
+
       <style jsx>{`
         @keyframes earthRotation {
-          0% { 
-            transform: rotateY(0deg); 
+          0% {
+            transform: rotateY(0deg);
           }
-          100% { 
-            transform: rotateY(360deg); 
+          100% {
+            transform: rotateY(360deg);
           }
         }
       `}</style>

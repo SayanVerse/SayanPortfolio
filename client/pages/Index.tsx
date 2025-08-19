@@ -63,7 +63,7 @@ export default function Index() {
   const openSectionInNewTab = (section: string) => {
     const currentUrl = window.location.origin + window.location.pathname;
     const newUrl = `${currentUrl}#${section}`;
-    window.open(newUrl, '_blank');
+    window.open(newUrl, "_blank");
     setIsMobileMenuOpen(false); // Close mobile menu after navigation
   };
 
@@ -273,37 +273,37 @@ export default function Index() {
             {/* Menu content */}
             <div className="absolute top-20 right-6 bg-background/90 backdrop-blur-lg border border-border rounded-lg shadow-2xl min-w-[200px]">
               <div className="flex flex-col py-4">
-              <button
-                onClick={() => scrollToSection("home")}
-                className="px-6 py-4 text-left text-foreground hover:text-primary hover:bg-primary/10 transition-colors border-b border-border/50"
-              >
-                Home
-              </button>
-              <button
-                onClick={() => openSectionInNewTab("about")}
-                className="px-6 py-4 text-left text-foreground hover:text-primary hover:bg-primary/10 transition-colors border-b border-border/50"
-              >
-                About
-              </button>
-              <button
-                onClick={() => openSectionInNewTab("projects")}
-                className="px-6 py-4 text-left text-foreground hover:text-primary hover:bg-primary/10 transition-colors border-b border-border/50"
-              >
-                Projects
-              </button>
-              <button
-                onClick={() => scrollToSection("certificates")}
-                className="px-6 py-4 text-left text-foreground hover:text-primary hover:bg-primary/10 transition-colors border-b border-border/50"
-              >
-                Certificates
-              </button>
-              <button
-                onClick={() => openSectionInNewTab("contact")}
-                className="px-6 py-4 text-left text-foreground hover:text-primary hover:bg-primary/10 transition-colors"
-              >
-                Contact
-              </button>
-            </div>
+                <button
+                  onClick={() => scrollToSection("home")}
+                  className="px-6 py-4 text-left text-foreground hover:text-primary hover:bg-primary/10 transition-colors border-b border-border/50"
+                >
+                  Home
+                </button>
+                <button
+                  onClick={() => openSectionInNewTab("about")}
+                  className="px-6 py-4 text-left text-foreground hover:text-primary hover:bg-primary/10 transition-colors border-b border-border/50"
+                >
+                  About
+                </button>
+                <button
+                  onClick={() => openSectionInNewTab("projects")}
+                  className="px-6 py-4 text-left text-foreground hover:text-primary hover:bg-primary/10 transition-colors border-b border-border/50"
+                >
+                  Projects
+                </button>
+                <button
+                  onClick={() => scrollToSection("certificates")}
+                  className="px-6 py-4 text-left text-foreground hover:text-primary hover:bg-primary/10 transition-colors border-b border-border/50"
+                >
+                  Certificates
+                </button>
+                <button
+                  onClick={() => openSectionInNewTab("contact")}
+                  className="px-6 py-4 text-left text-foreground hover:text-primary hover:bg-primary/10 transition-colors"
+                >
+                  Contact
+                </button>
+              </div>
             </div>
           </div>
         )}
@@ -318,14 +318,15 @@ export default function Index() {
 
           {/* Removed floating orbs and quantum particles as requested */}
           <div className="relative z-10 text-center max-w-4xl mx-auto px-6 flex flex-col">
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6">
               Hey, I'm <span className="gradient-text">Sayan Maiti</span>
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-              &nbsp;— 🚀 an aspiring CSE student at<br />
-              Swami Vivekananda Institute of Science and Technology,
-              passionate about 💻 coding, 🧠 problem-solving, and ⚡
-              building creative tech solutions.
+              &nbsp;— 🚀 an aspiring CSE student at
+              <br />
+              Swami Vivekananda Institute of Science and Technology, passionate
+              about 💻 coding, 🧠 problem-solving, and ⚡ building creative tech
+              solutions.
               <div>
                 <br />
               </div>
@@ -602,16 +603,24 @@ export default function Index() {
                 <CardContent className="p-6">
                   <div className="flex items-start space-x-4 mb-4">
                     <div className="w-12 h-12 rounded-full bg-gradient-to-r from-green-400 to-blue-500 flex items-center justify-center flex-shrink-0">
-                      <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M12 2L13.09 8.26L20 9L13.09 9.74L12 16L10.91 9.74L4 9L10.91 8.26L12 2Z"/>
+                      <svg
+                        className="w-6 h-6 text-white"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path d="M12 2L13.09 8.26L20 9L13.09 9.74L12 16L10.91 9.74L4 9L10.91 8.26L12 2Z" />
                       </svg>
                     </div>
                     <div className="flex-1">
                       <h3 className="text-xl font-semibold mb-2 group-hover:text-primary transition-colors">
                         AI for Beginners
                       </h3>
-                      <p className="text-sm text-muted-foreground mb-2">HP LIFE</p>
-                      <p className="text-xs text-muted-foreground mb-2">Issued Mar 2025</p>
+                      <p className="text-sm text-muted-foreground mb-2">
+                        HP LIFE
+                      </p>
+                      <p className="text-xs text-muted-foreground mb-2">
+                        Issued Mar 2025
+                      </p>
                       <p className="text-xs text-muted-foreground mb-4">
                         ID: 06218b60-20f3-41d3-821d-07ed564d15e2
                       </p>
@@ -620,7 +629,12 @@ export default function Index() {
                   <Button
                     variant="ghost"
                     className="p-0 h-auto text-primary hover:text-primary/80"
-                    onClick={() => window.open('https://www.life-global.org/certificate/06218b60-20f3-41d3-821d-07ed564d15e2', '_blank')}
+                    onClick={() =>
+                      window.open(
+                        "https://www.life-global.org/certificate/06218b60-20f3-41d3-821d-07ed564d15e2",
+                        "_blank",
+                      )
+                    }
                   >
                     View Certificate <ExternalLink className="w-4 h-4 ml-2" />
                   </Button>
@@ -632,16 +646,24 @@ export default function Index() {
                 <CardContent className="p-6">
                   <div className="flex items-start space-x-4 mb-4">
                     <div className="w-12 h-12 rounded-full bg-gradient-to-r from-orange-400 to-red-500 flex items-center justify-center flex-shrink-0">
-                      <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M8.851 18.56s-.917.534.653.714c1.902.218 2.874.187 4.969-.211 0 0 .552.346 1.321.646-4.699 2.013-10.633-.118-6.943-1.149M8.276 15.933s-1.028.761.542.924c2.032.209 3.636.227 6.413-.308 0 0 .384.389.987.602-5.679 1.661-12.007.13-7.942-1.218M13.116 11.475c1.158 1.333-.304 2.533-.304 2.533s2.939-1.518 1.589-3.418c-1.261-1.772-2.228-2.652 3.007-5.688 0-.001-8.216 2.051-4.292 6.573M19.33 20.504s.679.559-.747.991c-2.712.822-11.288 1.069-13.669.033-.856-.373.75-.89 1.254-.998.527-.114.828-.093.828-.093-.953-.671-6.156 1.317-2.643 1.887 9.58 1.553 17.462-.7 14.977-1.82M9.292 13.21s-4.362 1.036-1.544 1.412c1.189.159 3.561.123 5.77-.062 1.806-.152 3.618-.477 3.618-.477s-.637.272-1.098.587c-4.429 1.165-12.986.623-10.522-.568 2.082-1.006 3.776-.892 3.776-.892M17.116 17.584c4.503-2.34 2.421-4.589.968-4.285-.355.074-.515.138-.515.138s.132-.207.385-.297c2.875-1.011 5.086 2.981-.928 4.562 0-.001.07-.062.09-.118M14.401 0s2.494 2.494-2.365 6.33c-3.896 3.077-.888 4.832-.001 6.836-2.274-2.053-3.943-3.858-2.824-5.539 1.644-2.469 6.197-3.665 5.19-7.627M9.734 23.924c4.322.277 10.959-.153 11.116-2.198 0 0-.302.775-3.572 1.391-3.688.694-8.239.613-10.937.168 0-.001.553.457 3.393.639"/>
+                      <svg
+                        className="w-6 h-6 text-white"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path d="M8.851 18.56s-.917.534.653.714c1.902.218 2.874.187 4.969-.211 0 0 .552.346 1.321.646-4.699 2.013-10.633-.118-6.943-1.149M8.276 15.933s-1.028.761.542.924c2.032.209 3.636.227 6.413-.308 0 0 .384.389.987.602-5.679 1.661-12.007.13-7.942-1.218M13.116 11.475c1.158 1.333-.304 2.533-.304 2.533s2.939-1.518 1.589-3.418c-1.261-1.772-2.228-2.652 3.007-5.688 0-.001-8.216 2.051-4.292 6.573M19.33 20.504s.679.559-.747.991c-2.712.822-11.288 1.069-13.669.033-.856-.373.75-.89 1.254-.998.527-.114.828-.093.828-.093-.953-.671-6.156 1.317-2.643 1.887 9.58 1.553 17.462-.7 14.977-1.82M9.292 13.21s-4.362 1.036-1.544 1.412c1.189.159 3.561.123 5.77-.062 1.806-.152 3.618-.477 3.618-.477s-.637.272-1.098.587c-4.429 1.165-12.986.623-10.522-.568 2.082-1.006 3.776-.892 3.776-.892M17.116 17.584c4.503-2.34 2.421-4.589.968-4.285-.355.074-.515.138-.515.138s.132-.207.385-.297c2.875-1.011 5.086 2.981-.928 4.562 0-.001.07-.062.09-.118M14.401 0s2.494 2.494-2.365 6.33c-3.896 3.077-.888 4.832-.001 6.836-2.274-2.053-3.943-3.858-2.824-5.539 1.644-2.469 6.197-3.665 5.19-7.627M9.734 23.924c4.322.277 10.959-.153 11.116-2.198 0 0-.302.775-3.572 1.391-3.688.694-8.239.613-10.937.168 0-.001.553.457 3.393.639" />
                       </svg>
                     </div>
                     <div className="flex-1">
                       <h3 className="text-xl font-semibold mb-2 group-hover:text-primary transition-colors">
                         Java (Basic)
                       </h3>
-                      <p className="text-sm text-muted-foreground mb-2">HackerRank</p>
-                      <p className="text-xs text-muted-foreground mb-2">Issued Feb 2025</p>
+                      <p className="text-sm text-muted-foreground mb-2">
+                        HackerRank
+                      </p>
+                      <p className="text-xs text-muted-foreground mb-2">
+                        Issued Feb 2025
+                      </p>
                       <p className="text-xs text-muted-foreground mb-4">
                         ID: B5B3A86A574F
                       </p>
@@ -650,7 +672,12 @@ export default function Index() {
                   <Button
                     variant="ghost"
                     className="p-0 h-auto text-primary hover:text-primary/80"
-                    onClick={() => window.open('https://www.hackerrank.com/certificates/b5b3a86a574f', '_blank')}
+                    onClick={() =>
+                      window.open(
+                        "https://www.hackerrank.com/certificates/b5b3a86a574f",
+                        "_blank",
+                      )
+                    }
                   >
                     View Certificate <ExternalLink className="w-4 h-4 ml-2" />
                   </Button>
@@ -662,16 +689,24 @@ export default function Index() {
                 <CardContent className="p-6">
                   <div className="flex items-start space-x-4 mb-4">
                     <div className="w-12 h-12 rounded-full bg-gradient-to-r from-purple-400 to-pink-500 flex items-center justify-center flex-shrink-0">
-                      <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0L19.2 12l-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/>
+                      <svg
+                        className="w-6 h-6 text-white"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0L19.2 12l-4.6-4.6L16 6l6 6-6 6-1.4-1.4z" />
                       </svg>
                     </div>
                     <div className="flex-1">
                       <h3 className="text-xl font-semibold mb-2 group-hover:text-primary transition-colors">
                         Problem Solving (Basic)
                       </h3>
-                      <p className="text-sm text-muted-foreground mb-2">HackerRank</p>
-                      <p className="text-xs text-muted-foreground mb-2">Issued Feb 2025</p>
+                      <p className="text-sm text-muted-foreground mb-2">
+                        HackerRank
+                      </p>
+                      <p className="text-xs text-muted-foreground mb-2">
+                        Issued Feb 2025
+                      </p>
                       <p className="text-xs text-muted-foreground mb-4">
                         ID: 6AC58A65F3C1
                       </p>
@@ -680,7 +715,12 @@ export default function Index() {
                   <Button
                     variant="ghost"
                     className="p-0 h-auto text-primary hover:text-primary/80"
-                    onClick={() => window.open('https://www.hackerrank.com/certificates/6ac58a65f3c1', '_blank')}
+                    onClick={() =>
+                      window.open(
+                        "https://www.hackerrank.com/certificates/6ac58a65f3c1",
+                        "_blank",
+                      )
+                    }
                   >
                     View Certificate <ExternalLink className="w-4 h-4 ml-2" />
                   </Button>
@@ -736,9 +776,15 @@ export default function Index() {
                 variant="outline"
                 size="lg"
                 className="text-lg px-8 py-6 glow-button relative overflow-hidden"
-                onClick={() => window.open("https://discord.com/users/dorex_2024", "_blank")}
+                onClick={() =>
+                  window.open("https://discord.com/users/dorex_2024", "_blank")
+                }
               >
-                <svg className="w-5 h-5 mr-2" viewBox="0 0 24 24" fill="currentColor">
+                <svg
+                  className="w-5 h-5 mr-2"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
                   <path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419-.019 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1568 2.4189Z" />
                 </svg>
                 Discord Chat
