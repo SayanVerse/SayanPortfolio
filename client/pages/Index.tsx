@@ -220,7 +220,7 @@ export default function Index() {
                     Projects
                   </button>
                   <button
-                    onClick={() => openSectionInNewTab("certificates")}
+                    onClick={() => scrollToSection("certificates")}
                     className="text-foreground hover:text-primary transition-colors"
                   >
                     Certificates
