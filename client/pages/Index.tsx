@@ -222,6 +222,12 @@ export default function Index() {
                     Projects
                   </button>
                   <button
+                    onClick={() => scrollToSection("education")}
+                    className="text-foreground hover:text-primary transition-colors"
+                  >
+                    Education
+                  </button>
+                  <button
                     onClick={() => scrollToSection("certificates")}
                     className="text-foreground hover:text-primary transition-colors"
                   >
