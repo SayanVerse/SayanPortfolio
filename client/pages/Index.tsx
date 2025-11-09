@@ -141,7 +141,7 @@ export default function Index() {
         "Understanding low-level programming for system-level tasks and logic building.",
     },
     {
-      name: "🎨 HTML",
+      name: "���� HTML",
       level: 70,
       description:
         "Creating structured, semantic web pages with clear content organization.",
@@ -290,6 +290,12 @@ export default function Index() {
                     className="text-foreground hover:text-primary transition-colors"
                   >
                     Contact
+                  </button>
+                  <button
+                    onClick={() => scrollToSection("admin")}
+                    className="text-foreground hover:text-primary transition-colors"
+                  >
+                    {isAdmin ? "Admin" : "Login"}
                   </button>
                 </div>
 
