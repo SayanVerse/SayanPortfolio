@@ -69,5 +69,3 @@ export function SkeletonLoader({ onComplete }: SkeletonLoaderProps) {
     </div>
   );
 }
-
-import React from "react";
