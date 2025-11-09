@@ -13,16 +13,25 @@ export function useAdminAuth() {
 
   // Check for existing session on mount
   useEffect(() => {
-    const checkSession = async () => {
+    const checkSession = () => {
       try {
-        const {
-          data: { session },
-        } = await supabase.auth.getSession();
-        if (session?.user?.email === "sayan.official.2024@gmail.com") {
-          setUser({
-            email: session.user.email,
-            isAuthenticated: true,
-          });
+        // First check localStorage for local auth
+        const stored = localStorage.getItem("adminAuth");
+        if (stored) {
+          try {
+            const auth = JSON.parse(stored);
+            // Check if session is not older than 24 hours
+            if (Date.now() - auth.timestamp < 24 * 60 * 60 * 1000) {
+              setUser({
+                email: auth.email,
+                isAuthenticated: true,
+              });
+              setLoading(false);
+              return;
+            }
+          } catch (err) {
+            console.error("Failed to parse stored auth:", err);
+          }
         }
         setLoading(false);
       } catch (err) {
