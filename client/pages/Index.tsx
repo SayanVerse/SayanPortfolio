@@ -918,6 +918,36 @@ export default function Index() {
           </div>
         </section>
 
+        {/* Admin Section */}
+        <section
+          id="admin"
+          className="py-20 fade-in-up relative overflow-hidden animated-bg"
+        >
+          <AdvancedBackground />
+          <div className="max-w-4xl mx-auto px-6">
+            <div className="text-center mb-16 fade-in-up stagger-1">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 glow-text">
+                {isAdmin ? "Admin Dashboard" : "Admin Access"}
+              </h2>
+              <p className="text-muted-foreground text-lg">
+                {isAdmin
+                  ? "Manage your portfolio content"
+                  : "Log in to manage your portfolio"}
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 fade-in-up stagger-2">
+              {!isAdmin ? (
+                <AdminLogin onLoginSuccess={() => {}} />
+              ) : (
+                <div className="md:col-span-2">
+                  <AdminPanel />
+                </div>
+              )}
+            </div>
+          </div>
+        </section>
+
         {/* Footer */}
         <footer className="py-8 border-t bg-background">
           <div className="max-w-6xl mx-auto px-6">
