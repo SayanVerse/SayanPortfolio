@@ -230,11 +230,11 @@ export function AdminPanel() {
       </div>
 
       <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-        <TabsList className="grid w-full grid-cols-4">
-          <TabsTrigger value="about">About</TabsTrigger>
-          <TabsTrigger value="skills">Skills</TabsTrigger>
-          <TabsTrigger value="projects">Projects</TabsTrigger>
-          <TabsTrigger value="education">Education</TabsTrigger>
+        <TabsList className="grid w-full grid-cols-2 md:grid-cols-4 mb-6">
+          <TabsTrigger value="about" className="text-xs md:text-sm">About</TabsTrigger>
+          <TabsTrigger value="skills" className="text-xs md:text-sm">Skills</TabsTrigger>
+          <TabsTrigger value="projects" className="text-xs md:text-sm">Projects</TabsTrigger>
+          <TabsTrigger value="education" className="text-xs md:text-sm">Education</TabsTrigger>
         </TabsList>
 
         {/* About Tab */}
