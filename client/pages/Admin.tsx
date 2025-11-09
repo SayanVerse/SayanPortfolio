@@ -12,8 +12,9 @@ import { useNavigate } from "react-router-dom";
 
 export default function Admin() {
   const navigate = useNavigate();
-  const { isAdmin } = useAdminAuth();
+  const { isAdmin, loading } = useAdminAuth();
   const [isScrolled, setIsScrolled] = useState(false);
+  const [refreshKey, setRefreshKey] = useState(0);
 
   // Initialize interactive features
   useScrollAnimation();
@@ -34,6 +35,11 @@ export default function Admin() {
     htmlElement.classList.add("dark");
     htmlElement.setAttribute("data-theme", "dark");
   }, []);
+
+  React.useEffect(() => {
+    // Refresh admin panel when auth state changes
+    setRefreshKey((prev) => prev + 1);
+  }, [isAdmin]);
 
   return (
     <>
