@@ -146,6 +146,42 @@ export default function Index() {
 
   const projects = [
     {
+      title: "Clip-Board",
+      description:
+        "A multi-device clipboard management tool that enables seamless copy-paste synchronization between multiple devices. Share content across your devices instantly and efficiently.",
+      tags: ["Clipboard", "Multi-Device", "Synchronization", "Real-time"],
+      github: "https://github.com/SayanVerse/clip-board",
+      website: "https://clip-board.lovable.app",
+      image: "/placeholder.svg",
+    },
+    {
+      title: "InternLink",
+      description:
+        "An internship recommendation engine for the PM Internship Scheme, designed to match aspiring interns with suitable internship opportunities. Part of the Hackathon Project 2025.",
+      tags: ["Hackathon 2025", "Internship", "Recommendation Engine", "ML"],
+      github: "https://github.com/SayanVerse/pm-internship-scheme-recommendation",
+      website: "https://internlink-sih.netlify.app",
+      image: "/placeholder.svg",
+    },
+    {
+      title: "AttendPro",
+      description:
+        "A simple and effective attendance management system designed specifically for teachers. Streamline attendance tracking with an intuitive interface and easy-to-use features.",
+      tags: ["Attendance", "Management", "Teachers", "System"],
+      github: "https://github.com/SayanVerse/attend-svist.git",
+      website: "https://attend-svist.lovable.app",
+      image: "/placeholder.svg",
+    },
+    {
+      title: "EduTrack 360",
+      description:
+        "A comprehensive attendance management system for both students and teachers. Provides real-time tracking, analytics, and reporting features for educational institutions.",
+      tags: ["Attendance", "Education", "Analytics", "Management"],
+      github: "https://github.com/SayanVerse/EduTrack-360-",
+      website: "https://edutrack360.netlify.app",
+      image: "/placeholder.svg",
+    },
+    {
       title: "Loan Prediction Model",
       description:
         "A comprehensive machine learning project that predicts loan approval status using advanced algorithms. Implemented multiple ML models including Random Forest, Decision Tree, and K-Nearest Neighbors (KNN) to achieve optimal prediction accuracy. The project includes thorough data preprocessing, feature engineering, and model evaluation with cross-validation techniques.",
@@ -158,7 +194,7 @@ export default function Index() {
         "KNN",
         "Machine Learning",
       ],
-      link: "https://github.com/SayanVerse",
+      github: "https://github.com/SayanVerse",
       image: "/placeholder.svg",
     },
     {
@@ -173,7 +209,7 @@ export default function Index() {
         "Responsive Design",
         "UI/UX",
       ],
-      link: "#",
+      website: "#",
       image: "/placeholder.svg",
     },
   ];
