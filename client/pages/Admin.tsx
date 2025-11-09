@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { AdvancedBackground } from "@/components/ui/advanced-background";
 import { AdminPanel } from "@/components/admin/AdminPanel";
