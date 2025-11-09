@@ -101,6 +101,18 @@ export default function Index() {
 
   const skills = [
     {
+      name: "🌐 Web Development",
+      level: 85,
+      description:
+        "Building modern, responsive web applications with cutting-edge technologies and best practices.",
+    },
+    {
+      name: "🚀 Development using AI",
+      level: 90,
+      description:
+        "Leveraging AI tools and technologies to accelerate development and create intelligent solutions.",
+    },
+    {
       name: "🐍 Python",
       level: 90,
       description:
