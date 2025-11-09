@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { LiveClock } from "@/components/ui/live-clock";
 import { AdvancedBackground } from "@/components/ui/advanced-background";
 import { SkeletonLoader } from "@/components/ui/skeleton-loader";
+import { EducationSection } from "@/components/ui/education-section";
 import { useInteractiveBackground } from "@/hooks/useInteractiveBackground";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { useMobileOptimization } from "@/hooks/useMobileOptimization";
