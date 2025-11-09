@@ -91,10 +91,7 @@ export function EducationSection() {
                   )}
                 </div>
 
-                <Badge
-                  variant="secondary"
-                  className="text-xs"
-                >
+                <Badge variant="secondary" className="text-xs">
                   {item.endYear - item.startYear} years
                 </Badge>
               </CardContent>

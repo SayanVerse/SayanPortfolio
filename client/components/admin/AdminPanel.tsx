@@ -3,15 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Badge } from "@/components/ui/badge";
-import {
-  Trash2,
-  Plus,
-  Edit,
-  LogOut,
-  Save,
-  X,
-  CheckCircle,
-} from "lucide-react";
+import { Trash2, Plus, Edit, LogOut, Save, X, CheckCircle } from "lucide-react";
 import { useAdminAuth } from "@/hooks/useAdminAuth";
 import { supabase } from "@/lib/supabaseClient";
 
@@ -69,7 +61,7 @@ export function AdminPanel() {
 
   // Education management
   const [editingEducation, setEditingEducation] = useState<Education | null>(
-    null
+    null,
   );
   const [newEducation, setNewEducation] = useState<Education>({
     degree: "",
@@ -95,7 +87,9 @@ export function AdminPanel() {
 
   const handleUpdateSkill = (id: string, updated: Skill) => {
     setSkills(
-      skills.map((skill) => (skill.id === id ? { ...skill, ...updated } : skill))
+      skills.map((skill) =>
+        skill.id === id ? { ...skill, ...updated } : skill,
+      ),
     );
     setEditingSkill(null);
     showSuccess("Skill updated successfully!");
@@ -126,8 +120,8 @@ export function AdminPanel() {
   const handleUpdateProject = (id: string, updated: Project) => {
     setProjects(
       projects.map((project) =>
-        project.id === id ? { ...project, ...updated } : project
-      )
+        project.id === id ? { ...project, ...updated } : project,
+      ),
     );
     setEditingProject(null);
     showSuccess("Project updated successfully!");
@@ -160,7 +154,7 @@ export function AdminPanel() {
 
   const handleUpdateEducation = (id: string, updated: Education) => {
     setEducation(
-      education.map((edu) => (edu.id === id ? { ...edu, ...updated } : edu))
+      education.map((edu) => (edu.id === id ? { ...edu, ...updated } : edu)),
     );
     setEditingEducation(null);
     showSuccess("Education entry updated successfully!");
@@ -177,16 +171,14 @@ export function AdminPanel() {
   const handleUpdateAbout = async () => {
     try {
       // Save to Supabase
-      const { error } = await supabase
-        .from("portfolio_content")
-        .upsert(
-          {
-            id: "about",
-            content: about,
-            updated_at: new Date().toISOString(),
-          },
-          { onConflict: "id" }
-        );
+      const { error } = await supabase.from("portfolio_content").upsert(
+        {
+          id: "about",
+          content: about,
+          updated_at: new Date().toISOString(),
+        },
+        { onConflict: "id" },
+      );
 
       if (error) throw error;
 
@@ -231,10 +223,18 @@ export function AdminPanel() {
 
       <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
         <TabsList className="grid w-full grid-cols-2 md:grid-cols-4 mb-6">
-          <TabsTrigger value="about" className="text-xs md:text-sm">About</TabsTrigger>
-          <TabsTrigger value="skills" className="text-xs md:text-sm">Skills</TabsTrigger>
-          <TabsTrigger value="projects" className="text-xs md:text-sm">Projects</TabsTrigger>
-          <TabsTrigger value="education" className="text-xs md:text-sm">Education</TabsTrigger>
+          <TabsTrigger value="about" className="text-xs md:text-sm">
+            About
+          </TabsTrigger>
+          <TabsTrigger value="skills" className="text-xs md:text-sm">
+            Skills
+          </TabsTrigger>
+          <TabsTrigger value="projects" className="text-xs md:text-sm">
+            Projects
+          </TabsTrigger>
+          <TabsTrigger value="education" className="text-xs md:text-sm">
+            Education
+          </TabsTrigger>
         </TabsList>
 
         {/* About Tab */}
@@ -250,7 +250,10 @@ export function AdminPanel() {
                 placeholder="Write your about section here..."
                 className="w-full h-32 p-4 bg-background border border-input rounded-md focus:outline-none focus:ring-2 focus:ring-primary/50"
               />
-              <Button onClick={handleUpdateAbout} className="w-full glow-button">
+              <Button
+                onClick={handleUpdateAbout}
+                className="w-full glow-button"
+              >
                 <Save className="w-4 h-4 mr-2" />
                 Save About Section
               </Button>
@@ -456,10 +459,7 @@ export function AdminPanel() {
                 placeholder="Tags (comma separated)"
                 className="w-full px-4 py-2 bg-background border border-input rounded-md focus:outline-none focus:ring-2 focus:ring-primary/50"
               />
-              <Button
-                onClick={handleAddProject}
-                className="w-full glow-button"
-              >
+              <Button onClick={handleAddProject} className="w-full glow-button">
                 <Plus className="w-4 h-4 mr-2" />
                 Add Project
               </Button>
@@ -523,7 +523,11 @@ export function AdminPanel() {
                         </p>
                         <div className="flex flex-wrap gap-1 mb-2">
                           {project.tags.map((tag, idx) => (
-                            <Badge key={idx} variant="secondary" className="text-xs">
+                            <Badge
+                              key={idx}
+                              variant="secondary"
+                              className="text-xs"
+                            >
                               {tag}
                             </Badge>
                           ))}

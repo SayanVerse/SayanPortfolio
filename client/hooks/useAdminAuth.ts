@@ -63,7 +63,7 @@ export function useAdminAuth() {
           JSON.stringify({
             email: email,
             timestamp: Date.now(),
-          })
+          }),
         );
         return { success: true };
       } else {
@@ -71,8 +71,7 @@ export function useAdminAuth() {
         return { success: false, error: "Invalid credentials" };
       }
     } catch (err) {
-      const errorMessage =
-        err instanceof Error ? err.message : "Login failed";
+      const errorMessage = err instanceof Error ? err.message : "Login failed";
       setError(errorMessage);
       return { success: false, error: errorMessage };
     } finally {

@@ -173,7 +173,8 @@ export default function Index() {
       description:
         "An internship recommendation engine for the PM Internship Scheme, designed to match aspiring interns with suitable internship opportunities. Part of the Hackathon Project 2025.",
       tags: ["Hackathon 2025", "Internship", "Recommendation Engine", "ML"],
-      github: "https://github.com/SayanVerse/pm-internship-scheme-recommendation",
+      github:
+        "https://github.com/SayanVerse/pm-internship-scheme-recommendation",
       website: "https://internlink-sih.netlify.app",
       image: "/placeholder.svg",
     },
