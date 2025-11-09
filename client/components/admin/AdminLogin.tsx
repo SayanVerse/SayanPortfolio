@@ -25,6 +25,10 @@ export function AdminLogin({ onLoginSuccess }: AdminLoginProps) {
       setEmail("");
       setPassword("");
       onLoginSuccess?.();
+      // Reload the page to update the auth state and show the admin panel
+      setTimeout(() => {
+        window.location.reload();
+      }, 500);
     }
 
     setIsLoading(false);
