@@ -373,10 +373,10 @@ export default function Index() {
                   Contact
                 </button>
                 <button
-                  onClick={() => scrollToSection("admin")}
+                  onClick={() => navigate("/admin")}
                   className="px-6 py-4 text-left text-foreground hover:text-primary hover:bg-primary/10 transition-colors"
                 >
-                  {isAdmin ? "Admin" : "Login"}
+                  Admin
                 </button>
               </div>
             </div>
