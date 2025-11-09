@@ -370,9 +370,15 @@ export default function Index() {
                 </button>
                 <button
                   onClick={() => openSectionInNewTab("contact")}
-                  className="px-6 py-4 text-left text-foreground hover:text-primary hover:bg-primary/10 transition-colors"
+                  className="px-6 py-4 text-left text-foreground hover:text-primary hover:bg-primary/10 transition-colors border-b border-border/50"
                 >
                   Contact
+                </button>
+                <button
+                  onClick={() => scrollToSection("admin")}
+                  className="px-6 py-4 text-left text-foreground hover:text-primary hover:bg-primary/10 transition-colors"
+                >
+                  {isAdmin ? "Admin" : "Login"}
                 </button>
               </div>
             </div>
