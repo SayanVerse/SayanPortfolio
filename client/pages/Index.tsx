@@ -616,12 +616,30 @@ export default function Index() {
                           </Badge>
                         ))}
                       </div>
-                      <Button
-                        variant="ghost"
-                        className="p-0 h-auto text-primary hover:text-primary/80"
-                      >
-                        View Project <ExternalLink className="w-4 h-4 ml-2" />
-                      </Button>
+                      <div className="flex gap-2">
+                        {project.github && (
+                          <Button
+                            variant="ghost"
+                            className="p-0 h-auto text-primary hover:text-primary/80"
+                            onClick={() =>
+                              window.open(project.github, "_blank")
+                            }
+                          >
+                            GitHub <ExternalLink className="w-4 h-4 ml-2" />
+                          </Button>
+                        )}
+                        {project.website && project.website !== "#" && (
+                          <Button
+                            variant="ghost"
+                            className="p-0 h-auto text-primary hover:text-primary/80"
+                            onClick={() =>
+                              window.open(project.website, "_blank")
+                            }
+                          >
+                            Website <ExternalLink className="w-4 h-4 ml-2" />
+                          </Button>
+                        )}
+                      </div>
                     </div>
                   </CardContent>
                 </Card>
