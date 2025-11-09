@@ -85,33 +85,6 @@ export function useAdminAuth() {
     localStorage.removeItem("adminAuth");
   };
 
-  const checkAdminAuth = () => {
-    const stored = localStorage.getItem("adminAuth");
-    if (stored) {
-      try {
-        const auth = JSON.parse(stored);
-        // Check if session is not older than 24 hours
-        if (Date.now() - auth.timestamp < 24 * 60 * 60 * 1000) {
-          setUser({
-            email: auth.email,
-            isAuthenticated: true,
-          });
-          return true;
-        }
-      } catch (err) {
-        console.error("Failed to parse stored auth:", err);
-      }
-    }
-    return false;
-  };
-
-  // Try to restore session from localStorage on mount
-  useEffect(() => {
-    if (!user && !loading) {
-      checkAdminAuth();
-    }
-  }, []);
-
   return {
     user,
     loading,
