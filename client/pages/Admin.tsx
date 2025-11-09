@@ -85,15 +85,22 @@ export default function Admin() {
               </p>
             </div>
 
-            <div className="fade-in-up">
-              {!isAdmin ? (
-                <div className="max-w-md mx-auto">
-                  <AdminLogin onLoginSuccess={() => {}} />
+            {loading ? (
+              <div className="text-center py-12">
+                <div className="inline-block">
+                  <div className="w-8 h-8 border-4 border-primary/20 border-t-primary rounded-full animate-spin"></div>
                 </div>
-              ) : (
+                <p className="text-muted-foreground mt-4">Loading...</p>
+              </div>
+            ) : !isAdmin ? (
+              <div className="max-w-md mx-auto">
+                <AdminLogin onLoginSuccess={() => {}} />
+              </div>
+            ) : (
+              <div key={refreshKey} className="fade-in-up">
                 <AdminPanel />
-              )}
-            </div>
+              </div>
+            )}
           </div>
         </section>
       </div>
