@@ -594,6 +594,9 @@ export default function Index() {
           </div>
         </section>
 
+        {/* Education Section */}
+        <EducationSection />
+
         {/* Certificates Section */}
         <section
           id="certificates"
