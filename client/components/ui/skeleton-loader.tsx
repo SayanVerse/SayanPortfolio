@@ -48,7 +48,7 @@ export function SkeletonLoader({ onComplete }: SkeletonLoaderProps) {
         </div>
       </div>
 
-      <style jsx>{`
+      <style>{`
         @keyframes fadeOut {
           0% {
             opacity: 1;
