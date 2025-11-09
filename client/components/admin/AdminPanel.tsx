@@ -208,7 +208,7 @@ export function AdminPanel() {
   }
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-6 pb-10">
       {successMessage && (
         <div className="p-4 bg-green-500/10 border border-green-500/20 rounded-lg flex items-center gap-2">
           <CheckCircle className="w-5 h-5 text-green-500" />
