@@ -179,7 +179,7 @@ export default function Index() {
 
   return (
     <>
-      {isLoading && <LoadingAnimation onComplete={() => setIsLoading(false)} />}
+      {isLoading && <SkeletonLoader onComplete={() => setIsLoading(false)} />}
       <div
         className="min-h-screen bg-background"
         style={{
