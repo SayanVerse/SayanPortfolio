@@ -15,7 +15,12 @@ import { useAdminAuth } from "@/hooks/useAdminAuth";
 
 interface PortfolioData {
   about: string;
-  skills: Array<{ id: string; name: string; level: number; description: string }>;
+  skills: Array<{
+    id: string;
+    name: string;
+    level: number;
+    description: string;
+  }>;
   projects: Array<{
     id: string;
     title: string;
@@ -51,7 +56,9 @@ interface PortfolioData {
 
 export function SimpleAdminPanel() {
   const { logout } = useAdminAuth();
-  const [expandedSections, setExpandedSections] = useState<Record<string, boolean>>({
+  const [expandedSections, setExpandedSections] = useState<
+    Record<string, boolean>
+  >({
     about: false,
     skills: false,
     projects: false,
@@ -180,7 +187,9 @@ export function SimpleAdminPanel() {
           onClick={() => toggleSection("skills")}
         >
           <div className="flex justify-between items-center">
-            <CardTitle className="flex-1">Skills ({data.skills.length})</CardTitle>
+            <CardTitle className="flex-1">
+              Skills ({data.skills.length})
+            </CardTitle>
             {expandedSections.skills ? (
               <ChevronUp className="w-5 h-5" />
             ) : (
@@ -191,7 +200,10 @@ export function SimpleAdminPanel() {
         {expandedSections.skills && (
           <CardContent className="space-y-4">
             {data.skills.map((skill, idx) => (
-              <div key={skill.id} className="p-4 bg-muted/30 rounded-lg space-y-3">
+              <div
+                key={skill.id}
+                className="p-4 bg-muted/30 rounded-lg space-y-3"
+              >
                 <input
                   type="text"
                   value={skill.name}
@@ -204,7 +216,9 @@ export function SimpleAdminPanel() {
                   placeholder="Skill name"
                 />
                 <div className="flex gap-2 items-center">
-                  <span className="text-sm min-w-12">Level: {skill.level}%</span>
+                  <span className="text-sm min-w-12">
+                    Level: {skill.level}%
+                  </span>
                   <input
                     type="range"
                     min="0"
@@ -292,7 +306,10 @@ export function SimpleAdminPanel() {
         {expandedSections.projects && (
           <CardContent className="space-y-4">
             {data.projects.map((project, idx) => (
-              <div key={project.id} className="p-4 bg-muted/30 rounded-lg space-y-3">
+              <div
+                key={project.id}
+                className="p-4 bg-muted/30 rounded-lg space-y-3"
+              >
                 <input
                   type="text"
                   value={project.title}
@@ -416,7 +433,10 @@ export function SimpleAdminPanel() {
         {expandedSections.education && (
           <CardContent className="space-y-4">
             {data.education.map((edu, idx) => (
-              <div key={edu.id} className="p-4 bg-muted/30 rounded-lg space-y-3">
+              <div
+                key={edu.id}
+                className="p-4 bg-muted/30 rounded-lg space-y-3"
+              >
                 <input
                   type="text"
                   value={edu.degree}
@@ -540,7 +560,10 @@ export function SimpleAdminPanel() {
         {expandedSections.certificates && (
           <CardContent className="space-y-4">
             {data.certificates.map((cert, idx) => (
-              <div key={cert.id} className="p-4 bg-muted/30 rounded-lg space-y-3">
+              <div
+                key={cert.id}
+                className="p-4 bg-muted/30 rounded-lg space-y-3"
+              >
                 <input
                   type="text"
                   value={cert.title}
@@ -602,7 +625,9 @@ export function SimpleAdminPanel() {
                   onClick={() => {
                     setData({
                       ...data,
-                      certificates: data.certificates.filter((_, i) => i !== idx),
+                      certificates: data.certificates.filter(
+                        (_, i) => i !== idx,
+                      ),
                     });
                   }}
                 >
