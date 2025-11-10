@@ -71,9 +71,9 @@ export default function Admin() {
         </nav>
 
         {/* Admin Page Content */}
-        <section className="min-h-screen pt-24 pb-20 relative overflow-hidden animated-bg">
+        <section className="min-h-screen pt-24 pb-20 relative overflow-visible animated-bg">
           <AdvancedBackground />
-          <div className="max-w-4xl mx-auto px-6 relative z-10">
+          <div className="max-w-4xl mx-auto px-6 relative z-10 overflow-visible">
             <div className="text-center mb-16 fade-in-up">
               <h1 className="text-3xl md:text-4xl font-bold mb-4 glow-text">
                 {isAdmin ? "Admin Dashboard" : "Admin Access"}
