@@ -265,13 +265,13 @@ export default function Index() {
                     Home
                   </button>
                   <button
-                    onClick={() => openSectionInNewTab("about")}
+                    onClick={() => navigateToSection("about")}
                     className="text-foreground hover:text-primary transition-colors"
                   >
                     About
                   </button>
                   <button
-                    onClick={() => openSectionInNewTab("projects")}
+                    onClick={() => navigateToSection("projects")}
                     className="text-foreground hover:text-primary transition-colors"
                   >
                     Projects
