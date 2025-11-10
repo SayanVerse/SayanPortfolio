@@ -289,7 +289,7 @@ export default function Index() {
                     Certificates
                   </button>
                   <button
-                    onClick={() => openSectionInNewTab("contact")}
+                    onClick={() => navigateToSection("contact")}
                     className="text-foreground hover:text-primary transition-colors"
                   >
                     Contact
