@@ -3,15 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Badge } from "@/components/ui/badge";
-import {
-  Trash2,
-  Plus,
-  Edit,
-  LogOut,
-  Save,
-  X,
-  CheckCircle,
-} from "lucide-react";
+import { Trash2, Plus, Edit, LogOut, Save, X, CheckCircle } from "lucide-react";
 import { useAdminAuth } from "@/hooks/useAdminAuth";
 
 interface Skill {
@@ -63,7 +55,7 @@ export function AdminDashboard() {
 
   // About
   const [about, setAbout] = useState(
-    "— 🚀 an aspiring CSE student at Swami Vivekananda Institute of Science and Technology, passionate about 💻 coding, 🧠 problem-solving, and ⚡ building creative tech solutions."
+    "— 🚀 an aspiring CSE student at Swami Vivekananda Institute of Science and Technology, passionate about 💻 coding, 🧠 problem-solving, and ⚡ building creative tech solutions.",
   );
 
   // Skills
@@ -101,7 +93,8 @@ export function AdminDashboard() {
       description:
         "An internship recommendation engine for the PM Internship Scheme.",
       tags: ["Hackathon 2025", "Internship"],
-      github: "https://github.com/SayanVerse/pm-internship-scheme-recommendation",
+      github:
+        "https://github.com/SayanVerse/pm-internship-scheme-recommendation",
       website: "https://internlink-sih.netlify.app",
     },
   ]);
@@ -157,11 +150,10 @@ export function AdminDashboard() {
   const [editingSkill, setEditingSkill] = useState<Skill | null>(null);
   const [editingProject, setEditingProject] = useState<Project | null>(null);
   const [editingEducation, setEditingEducation] = useState<Education | null>(
-    null
+    null,
   );
-  const [editingCertificate, setEditingCertificate] = useState<Certificate | null>(
-    null
-  );
+  const [editingCertificate, setEditingCertificate] =
+    useState<Certificate | null>(null);
 
   const showSuccess = (message: string) => {
     setSuccessMessage(message);
@@ -170,7 +162,9 @@ export function AdminDashboard() {
 
   const handleUpdateSkill = (id: string, updated: Skill) => {
     setSkills(
-      skills.map((skill) => (skill.id === id ? { ...skill, ...updated } : skill))
+      skills.map((skill) =>
+        skill.id === id ? { ...skill, ...updated } : skill,
+      ),
     );
     setEditingSkill(null);
     showSuccess("Skill updated successfully!");
@@ -189,8 +183,8 @@ export function AdminDashboard() {
   const handleUpdateProject = (id: string, updated: Project) => {
     setProjects(
       projects.map((project) =>
-        project.id === id ? { ...project, ...updated } : project
-      )
+        project.id === id ? { ...project, ...updated } : project,
+      ),
     );
     setEditingProject(null);
     showSuccess("Project updated successfully!");
@@ -208,7 +202,7 @@ export function AdminDashboard() {
 
   const handleUpdateEducation = (id: string, updated: Education) => {
     setEducation(
-      education.map((edu) => (edu.id === id ? { ...edu, ...updated } : edu))
+      education.map((edu) => (edu.id === id ? { ...edu, ...updated } : edu)),
     );
     setEditingEducation(null);
     showSuccess("Education updated successfully!");
@@ -386,7 +380,9 @@ export function AdminDashboard() {
                   {editingProject?.id === project.id ? (
                     <EditProjectForm
                       project={editingProject}
-                      onSave={() => handleUpdateProject(project.id, editingProject)}
+                      onSave={() =>
+                        handleUpdateProject(project.id, editingProject)
+                      }
                       onCancel={() => setEditingProject(null)}
                       onChange={setEditingProject}
                     />
@@ -399,7 +395,11 @@ export function AdminDashboard() {
                         </p>
                         <div className="flex flex-wrap gap-1 mb-3">
                           {project.tags.map((tag, idx) => (
-                            <Badge key={idx} variant="secondary" className="text-xs">
+                            <Badge
+                              key={idx}
+                              variant="secondary"
+                              className="text-xs"
+                            >
                               {tag}
                             </Badge>
                           ))}
@@ -472,7 +472,9 @@ export function AdminDashboard() {
                   {editingEducation?.id === edu.id ? (
                     <EditEducationForm
                       education={editingEducation}
-                      onSave={() => handleUpdateEducation(edu.id, editingEducation)}
+                      onSave={() =>
+                        handleUpdateEducation(edu.id, editingEducation)
+                      }
                       onCancel={() => setEditingEducation(null)}
                       onChange={setEditingEducation}
                     />
@@ -670,11 +672,7 @@ export function AdminDashboard() {
 }
 
 // Form Components
-function AddSkillForm({
-  onAdd,
-}: {
-  onAdd: (skill: Skill) => void;
-}) {
+function AddSkillForm({ onAdd }: { onAdd: (skill: Skill) => void }) {
   const [name, setName] = useState("");
   const [level, setLevel] = useState(50);
   const [description, setDescription] = useState("");
@@ -752,7 +750,9 @@ function EditSkillForm({
         className="w-full px-4 py-2 bg-background border border-input rounded-md focus:outline-none focus:ring-2 focus:ring-primary/50"
       />
       <div>
-        <label className="text-sm text-muted-foreground">Level: {skill.level}%</label>
+        <label className="text-sm text-muted-foreground">
+          Level: {skill.level}%
+        </label>
         <input
           type="range"
           min="0"
@@ -783,11 +783,7 @@ function EditSkillForm({
   );
 }
 
-function AddProjectForm({
-  onAdd,
-}: {
-  onAdd: (project: Project) => void;
-}) {
+function AddProjectForm({ onAdd }: { onAdd: (project: Project) => void }) {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [tags, setTags] = useState("");
@@ -801,7 +797,10 @@ function AddProjectForm({
         id: "",
         title,
         description,
-        tags: tags.split(",").map((t) => t.trim()).filter(Boolean),
+        tags: tags
+          .split(",")
+          .map((t) => t.trim())
+          .filter(Boolean),
         github,
         website,
       });
