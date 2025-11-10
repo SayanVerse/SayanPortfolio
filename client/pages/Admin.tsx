@@ -98,7 +98,7 @@ export default function Admin() {
               </div>
             ) : (
               <div key={refreshKey} className="fade-in-up">
-                <AdminPanel />
+                <AdminDashboard />
               </div>
             )}
           </div>
