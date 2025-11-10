@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { AdvancedBackground } from "@/components/ui/advanced-background";
-import { AdminDashboard } from "@/components/admin/AdminDashboard";
+import { SimpleAdminPanel } from "@/components/admin/SimpleAdminPanel";
 import { AdminLogin } from "@/components/admin/AdminLogin";
 import { useAdminAuth } from "@/hooks/useAdminAuth";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
