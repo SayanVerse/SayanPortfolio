@@ -372,7 +372,7 @@ export default function Index() {
                   Certificates
                 </button>
                 <button
-                  onClick={() => openSectionInNewTab("contact")}
+                  onClick={() => navigateToSection("contact")}
                   className="px-6 py-4 text-left text-foreground hover:text-primary hover:bg-primary/10 transition-colors border-b border-border/50"
                 >
                   Contact
