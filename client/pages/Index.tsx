@@ -63,10 +63,12 @@ export default function Index() {
     }
   }, []);
 
-  const openSectionInNewTab = (section: string) => {
-    const currentUrl = window.location.origin + window.location.pathname;
-    const newUrl = `${currentUrl}#${section}`;
-    window.open(newUrl, "_blank");
+  const navigateToSection = (id: string) => {
+    // Scroll to section on the same page
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
     setIsMobileMenuOpen(false); // Close mobile menu after navigation
   };
 
