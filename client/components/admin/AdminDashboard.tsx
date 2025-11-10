@@ -229,7 +229,7 @@ export function AdminDashboard() {
   };
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-6 w-full">
       {successMessage && (
         <div className="p-4 bg-green-500/10 border border-green-500/20 rounded-lg flex items-center gap-2 sticky top-24 z-40">
           <CheckCircle className="w-5 h-5 text-green-500" />
